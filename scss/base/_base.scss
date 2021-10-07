@@ -1,8 +1,17 @@
+html,
+body,
+#app,
+#__nuxt,
+#__layout {
+  // min-height: 100%;
+  height: 100%;
+}
 html {
   box-sizing: border-box;
 }
 body {
   hyphens: auto;
+  background-color: $gray-1;
 }
 *,
 *:before,

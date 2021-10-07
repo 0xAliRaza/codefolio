@@ -1,5 +1,9 @@
 <template>
-  <User :user="user" />
+  <div class="container-md h-100">
+    <section class="about">
+      <User :user="user" />
+    </section>
+  </div>
 </template>
 
 <script lang="ts">
@@ -14,3 +18,12 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+</style>

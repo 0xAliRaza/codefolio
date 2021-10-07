@@ -1,27 +1,20 @@
-@mixin secondary-font {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+@mixin hocus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+@mixin hocus-active {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
 }
 
-
-@mixin gray-border {
-    border: 1px solid $gray-3;
-    transition: border 100ms;
-    &:hover,
-    &:focus {
-        border: 1px solid $gray-5;
-        outline: none;
-    }
-}
-@mixin primary-border {
-    border: 1px solid $primary;
-}
-
-@mixin border($color, $hover-color) {
-    
-    border: 1px solid $color;
-    &:hover,
-    &:focus {
-        border: 1px solid $hover-color;
-    }
+@mixin glow($color) {
+    box-shadow: 0 0 pxToRem(16) rgba($color, 0.3);
+  @include hocus {
+    box-shadow: 0 0 pxToRem(20) rgba($color, 0.7);
+  }
 }
