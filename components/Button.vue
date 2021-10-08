@@ -1,7 +1,12 @@
 <template>
   <button
     class="button"
-    :class="{ button__primary: primary, button__outline: outline }"
+    :class="{
+      'button--primary': primary,
+      'button--outline-primary': outlinePrimary,
+      'button--outline-gray': outlineGray,
+      'button--small': small,
+    }"
   >
     <slot></slot>
   </button>
@@ -11,8 +16,10 @@
 import Vue from 'vue'
 export default Vue.extend({
   props: {
+    small: Boolean,
     primary: Boolean,
-    outline: Boolean,
+    outlinePrimary: Boolean,
+    outlineGray: Boolean,
   },
 })
 </script>
@@ -33,19 +40,34 @@ export default Vue.extend({
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
     transform 0.15s ease-in-out;
-  &__primary {
+  &--small {
+    font-size: pxToRem(15);
+    padding: pxToRem(6) pxToRem(14);
+  }
+  &--primary {
     background-color: $primary;
     border-color: $primary;
     color: $light;
     @include glow($primary);
   }
-  &__outline {
-    background-color: $gray-1;
-    border-color: $primary;
-    color: $primary;
-    @include hocus-active {
-      background-color: $primary;
-      color: $light;
+  &--outline {
+    &-primary {
+      background-color: transparent;
+      border-color: $primary;
+      color: $primary;
+      @include hocus-active {
+        background-color: $primary;
+        color: $light;
+      }
+    }
+    &-gray {
+      background-color: transparent;
+      border-color: $gray-7;
+      color: $gray-7;
+      @include hocus-active {
+        background-color: $gray-7;
+        color: $light;
+      }
     }
   }
 }

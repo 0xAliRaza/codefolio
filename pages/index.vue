@@ -1,9 +1,7 @@
 <template>
-  <div class="container-md h-100">
-    <section class="about">
-      <User :user="user" />
-    </section>
-  </div>
+  <section class="about">
+    <User :user="user" />
+  </section>
 </template>
 
 <script lang="ts">
@@ -20,10 +18,11 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+@import '@/scss/abstracts';
 .about {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: calc(100% - #{$navbar-height});
 }
 </style>

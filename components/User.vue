@@ -19,7 +19,7 @@
           </div>
           <div class="user__cta">
             <Button class="me-1" primary>Contact</Button>
-            <Button class="" outline>Portfolio</Button>
+            <Button class="" outline-primary>Portfolio</Button>
           </div>
         </div>
       </div>
