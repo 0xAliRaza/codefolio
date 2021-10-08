@@ -1,7 +1,14 @@
 <template>
   <div class="container-fluid">
     <nav class="navbar">
-      <Button small outline-gray class="me-3">Resume</Button>
+      <Button
+        v-if="resumeUrl"
+        :link="resumeUrl"
+        small
+        outline-gray
+        class="me-3 navbar__resume-button"
+        >Resume</Button
+      >
       <ul class="navbar__list">
         <li class="navbar__list-item">
           <NuxtLink class="navbar__link" to="/">Contact</NuxtLink>
@@ -12,17 +19,32 @@
         <li class="navbar__list-item">
           <NuxtLink class="navbar__link" to="/">Portfolio</NuxtLink>
         </li>
-        <li class="navbar__list-item">
-          <NuxtLink class="navbar__link" to="/">Github</NuxtLink>
-        </li>
-        <li class="navbar__list-item">
-          <NuxtLink class="navbar__link" to="/">Blog</NuxtLink>
+        <li
+          v-for="link in externalLinks"
+          :key="link.url"
+          class="navbar__list-item"
+        >
+          <a class="navbar__link" :href="link.url" target="_blank"
+            >{{ link.text }}
+            <icon name="external-link" desc="resume icon" class="ms-1"></icon
+          ></a>
         </li>
       </ul>
     </nav>
   </div>
 </template>
-
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  props: {
+    resumeUrl: { type: String, default: null },
+    externalLinks: {
+      type: Array,
+      default: null,
+    },
+  },
+})
+</script>
 <style lang="scss" scoped>
 @import '@/scss/abstracts';
 .navbar {
@@ -43,6 +65,10 @@
   }
 
   &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
     font-size: pxToRem(15);
     font-weight: 500;
     color: $gray-5;

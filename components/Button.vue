@@ -1,7 +1,21 @@
 <template>
-  <button
-    class="button"
+  <a
+    v-if="link"
+    :href="link"
     :class="{
+      button: true,
+      'button--primary': primary,
+      'button--outline-primary': outlinePrimary,
+      'button--outline-gray': outlineGray,
+      'button--small': small,
+    }"
+  >
+    <slot></slot>
+  </a>
+  <button
+    v-else
+    :class="{
+      button: true,
       'button--primary': primary,
       'button--outline-primary': outlinePrimary,
       'button--outline-gray': outlineGray,
@@ -20,12 +34,19 @@ export default Vue.extend({
     primary: Boolean,
     outlinePrimary: Boolean,
     outlineGray: Boolean,
+    link: {
+      default: null,
+      type: String,
+    },
   },
 })
 </script>
 
 <style lang="scss" scoped>
 @import '@/scss/abstracts';
+a.button {
+  text-decoration: none;
+}
 .button {
   display: inline-block;
   font-size: pxToRem(16);
