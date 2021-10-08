@@ -1,27 +1,23 @@
 <template>
-  <div class="row">
-    <div class="col-12">
-      <div class="user">
-        <div class="user__image-container">
-          <img
-            class="user__image"
-            :src="user.image"
-            :alt="`${user.fullname}'s image`"
-          />
-        </div>
-        <div class="user__meta">
-          <h4 class="user__title">{{ user.title }}</h4>
-          <h1 class="user__name">{{ user.fullname }}</h1>
-          <div class="user__about">
-            <p>
-              {{ user.about }}
-            </p>
-          </div>
-          <div class="user__cta">
-            <Button class="me-1" primary>Contact</Button>
-            <Button class="" outline-primary>Portfolio</Button>
-          </div>
-        </div>
+  <div class="user">
+    <div class="user__image-container">
+      <img
+        class="user__image"
+        :src="user.image"
+        :alt="`${user.fullname}'s image`"
+      />
+    </div>
+    <div class="user__meta">
+      <h4 class="user__title">{{ user.title }}</h4>
+      <h1 class="user__name">{{ user.fullname }}</h1>
+      <div class="user__about">
+        <p>
+          {{ user.about }}
+        </p>
+      </div>
+      <div class="user__cta">
+        <Button class="me-1" primary>Contact</Button>
+        <Button class="" outline-primary>Portfolio</Button>
       </div>
     </div>
   </div>
@@ -53,7 +49,9 @@ export default Vue.extend({
   }
   &__image-container {
     padding: pxToRem(16);
-    margin-bottom: pxToRem(16);
+    @include media-breakpoint-down(md) {
+      margin-bottom: pxToRem(16);
+    }
   }
   &__image {
     max-width: pxToRem(200);
@@ -73,7 +71,7 @@ export default Vue.extend({
     }
   }
   &__meta {
-    padding: pxToRem(8);
+    padding: pxToRem(10);
     align-self: center;
     display: flex;
     flex-direction: column;

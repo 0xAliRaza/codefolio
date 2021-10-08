@@ -20,6 +20,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import '@/scss/abstracts';
 .about {
+  padding: pxToRem(10);
   display: flex;
   align-items: center;
   justify-content: center;
