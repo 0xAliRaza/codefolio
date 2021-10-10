@@ -7,8 +7,8 @@ import Vue from 'vue'
 export default Vue.extend({
   props: {
     name: { type: String, required: true },
-    title: { type: String, default: null },
-    desc: { type: String, default: null },
+    title: { type: String, default: 'test title' },
+    desc: { type: String, default: 'test desc' },
   },
 })
 </script>
