@@ -78,7 +78,7 @@ export default Vue.extend({
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: $gray-1;
+  background-color: transparent;
   padding: pxToRem(20);
   padding: pxToRem(20) pxToRem(10);
   &--show {
