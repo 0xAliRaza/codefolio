@@ -16,8 +16,10 @@
         </p>
       </div>
       <div class="user__cta">
-        <Button class="me-1" primary>Contact</Button>
-        <Button class="" outline-primary>Portfolio</Button>
+        <Button class="me-1" primary nuxt-link="/contact">Contact</Button>
+        <Button class="" outline-primary nuxt-link="/portfolio"
+          >Portfolio</Button
+        >
       </div>
     </div>
   </div>

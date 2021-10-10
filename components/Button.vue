@@ -1,27 +1,11 @@
 <template>
-  <a
-    v-if="link"
-    :href="link"
-    :class="{
-      button: true,
-      'button--primary': primary,
-      'button--outline-primary': outlinePrimary,
-      'button--outline-gray': outlineGray,
-      'button--small': small,
-    }"
-  >
+  <a v-if="link" :href="link" :class="{ ...classes }">
     <slot></slot>
   </a>
-  <button
-    v-else
-    :class="{
-      button: true,
-      'button--primary': primary,
-      'button--outline-primary': outlinePrimary,
-      'button--outline-gray': outlineGray,
-      'button--small': small,
-    }"
-  >
+  <nuxt-link v-else-if="nuxtLink" :to="nuxtLink" :class="{ ...classes }">
+    <slot></slot>
+  </nuxt-link>
+  <button v-else :class="{ ...classes }">
     <slot></slot>
   </button>
 </template>
@@ -37,6 +21,21 @@ export default Vue.extend({
     link: {
       default: null,
       type: String,
+    },
+    nuxtLink: {
+      default: null,
+      type: String,
+    },
+  },
+  computed: {
+    classes(): any {
+      return {
+        button: true,
+        'button--primary': this.primary,
+        'button--outline-primary': this.outlinePrimary,
+        'button--outline-gray': this.outlineGray,
+        'button--small': this.small,
+      }
     },
   },
 })

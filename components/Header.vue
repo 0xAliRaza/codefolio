@@ -23,14 +23,17 @@
       >
       <ul class="navbar__list">
         <li class="navbar__list-item">
-          <NuxtLink class="navbar__link" to="/">Contact</NuxtLink>
+          <NuxtLink class="navbar__link" to="/">About</NuxtLink>
         </li>
         <li class="navbar__list-item">
-          <NuxtLink class="navbar__link" to="/">Skills</NuxtLink>
+          <NuxtLink class="navbar__link" to="/contact">Contact</NuxtLink>
         </li>
         <li class="navbar__list-item">
-          <NuxtLink class="navbar__link" to="/">Portfolio</NuxtLink>
+          <NuxtLink class="navbar__link" to="/portfolio">Portfolio</NuxtLink>
         </li>
+        <!-- <li class="navbar__list-item">
+          <NuxtLink class="navbar__link" to="/skills">Skills</NuxtLink>
+        </li> -->
         <li
           v-for="link in externalLinks"
           :key="link.url"
