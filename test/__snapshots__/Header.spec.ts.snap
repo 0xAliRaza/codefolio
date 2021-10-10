@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<div class="container-fluid">
+  <div tabindex="0"
+       class="navbar__toggler"
+  >
+    <span>
+    </span>
+    <span>
+    </span>
+    <span>
+    </span>
+  </div>
+  <nav class="navbar">
+    <ul class="navbar__list">
+      <li class="navbar__list-item">
+        <nuxtlink-stub to="/"
+                       class="navbar__link"
+        >
+          Contact
+        </nuxtlink-stub>
+      </li>
+      <li class="navbar__list-item">
+        <nuxtlink-stub to="/"
+                       class="navbar__link"
+        >
+          Skills
+        </nuxtlink-stub>
+      </li>
+      <li class="navbar__list-item">
+        <nuxtlink-stub to="/"
+                       class="navbar__link"
+        >
+          Portfolio
+        </nuxtlink-stub>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

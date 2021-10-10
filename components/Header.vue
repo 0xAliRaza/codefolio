@@ -49,10 +49,10 @@
 import Vue from 'vue'
 export default Vue.extend({
   props: {
-    resumeUrl: { type: String, default: '#test' },
+    resumeUrl: { type: String, default: null },
     externalLinks: {
       type: Array,
-      default: () => [{ text: 'text', url: '#test' }],
+      default: null,
     },
   },
   data: () => {

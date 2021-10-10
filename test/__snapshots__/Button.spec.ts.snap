@@ -1,3 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `"<button class=\\"button\\"></button>"`;
+exports[`renders correctly 1`] = `
+<button class="button">
+</button>
+`;

@@ -17,6 +17,7 @@
     "@nuxtjs/svg-sprite": "^0.5.2",
     "bootstrap": "^5.1.2",
     "core-js": "^3.15.1",
+    "jest-serializer-html": "^7.1.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.15.7",
     "setimmediate": "^1.0.5"

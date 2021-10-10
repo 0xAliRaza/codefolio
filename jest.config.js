@@ -17,4 +17,5 @@ module.exports = {
   ],
   testEnvironment: 'jsdom',
   preset: '@nuxt/test-utils',
+  snapshotSerializers: ['jest-serializer-html'],
 }
