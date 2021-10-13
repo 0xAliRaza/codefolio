@@ -26,10 +26,10 @@
           <NuxtLink class="navbar__link" to="/">About</NuxtLink>
         </li>
         <li class="navbar__list-item">
-          <NuxtLink class="navbar__link" to="/contact">Contact</NuxtLink>
+          <NuxtLink class="navbar__link" to="/portfolio">Portfolio</NuxtLink>
         </li>
         <li class="navbar__list-item">
-          <NuxtLink class="navbar__link" to="/portfolio">Portfolio</NuxtLink>
+          <NuxtLink class="navbar__link" to="/contact">Contact</NuxtLink>
         </li>
         <!-- <li class="navbar__list-item">
           <NuxtLink class="navbar__link" to="/skills">Skills</NuxtLink>
@@ -73,7 +73,7 @@ export default Vue.extend({
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;

@@ -97,6 +97,7 @@ export default Vue.extend({
   &__name {
     margin: 0 0 pxToRem(12);
     font-size: pxToRem(32);
+    font-weight: 600;
     @include media-breakpoint-up(md) {
       line-height: pxToRem(50);
       font-size: pxToRem(48);
@@ -110,6 +111,7 @@ export default Vue.extend({
       font-weight: 400;
       color: $gray-7;
       margin: 0;
+      line-height: 1.75em;
     }
   }
 }
