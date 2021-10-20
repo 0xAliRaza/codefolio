@@ -19,6 +19,29 @@ exports[`Project renders correctly 1`] = `
         test_description_ljsdfljk128734
       </p>
     </div>
+    <div class="project__links mt-3">
+      <button-stub link="https://github.com/"
+                   small
+                   primary
+                   class="me-1 mb-2"
+      >
+        Live Demo
+      </button-stub>
+      <button-stub link="https://0xali.com"
+                   small
+                   github
+                   class="me-1 mb-2"
+      >
+        Source Code
+      </button-stub>
+      <button-stub link="https://youtube.com/"
+                   small
+                   youtube
+                   class="me-1 mb-2"
+      >
+        Video Demo
+      </button-stub>
+    </div>
   </div>
 </div>
 `;

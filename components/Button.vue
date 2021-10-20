@@ -16,6 +16,9 @@ export default Vue.extend({
   props: {
     small: Boolean,
     primary: Boolean,
+    primaryGlow: Boolean,
+    youtube: Boolean,
+    github: Boolean,
     outlinePrimary: Boolean,
     outlineGray: Boolean,
     link: {
@@ -32,7 +35,10 @@ export default Vue.extend({
       return {
         button: true,
         'button--primary': this.primary,
+        'button--primary-glow': this.primaryGlow,
         'button--outline-primary': this.outlinePrimary,
+        'button--youtube': this.youtube,
+        'button--github': this.github,
         'button--outline-gray': this.outlineGray,
         'button--small': this.small,
       }
@@ -68,7 +74,33 @@ a.button {
     background-color: $primary;
     border-color: $primary;
     color: $light;
+    @include hocus {
+      background-color: darken($primary, 8%);
+    }
+  }
+  &--primary-glow {
+    background-color: $primary;
+    border-color: $primary;
+    color: $light;
     @include glow($primary);
+  }
+  &--youtube {
+    background-color: transparent;
+    border-color: $youtube;
+    color: $youtube;
+    @include hocus-active {
+      background-color: $youtube;
+      color: $light;
+    }
+  }
+  &--github {
+    background-color: transparent;
+    border-color: $github;
+    color: $github;
+    @include hocus-active {
+      background-color: $github;
+      color: $light;
+    }
   }
   &--outline {
     &-primary {

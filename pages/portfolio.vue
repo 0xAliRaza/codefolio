@@ -1,42 +1,39 @@
 <template>
   <section class="portfolio">
     <div class="container">
-      <div class="row">
-        <div class="col-12 text-center my-5">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center mb-4">
           <h1>Portfolio</h1>
         </div>
-        <div class="col-6">
+        <div
+          v-for="project in projects"
+          :key="project.id"
+          class="col-12 col-md-8 col-lg-6 mb-4 mb-lg-5"
+        >
           <Project
-            title="Habitly"
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dolor labore mollitia laboriosam inventore quos rerum voluptatibus eius soluta aliquam, accusamus esse sequi ut facilis incidunt ab quia dolore asperiores!"
+            :title="project.title"
+            :description="project.description"
             image="https://source.unsplash.com/random/1920x1080"
-          />
-        </div>
-        <div class="col-6 mb-4">
-          <Project
-            title="Write it down"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus delectus officiis sint incidunt laborum odit dicta repellendus quasi? Quae odit necessitatibus error sequi ullam, repudiandae quisquam inventore voluptatum molestias eaque?"
-            image="https://source.unsplash.com/random/1920x1080"
-          />
-        </div>
-        <div class="col-6 mb-4">
-          <Project
-            title="Wordsery"
-            description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error eum nesciunt nam atque deleniti quisquam sapiente ut facere sint, dolores laudantium et cum accusantium. Corporis eius repellendus qui hic molestias!"
-            image="https://source.unsplash.com/random/1920x1080"
-          />
-        </div>
-        <div class="col-6 mb-4">
-          <Project
-            title="Codefolio"
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dicta laudantium ducimus nisi, ullam quibusdam nostrum temporibus, sit voluptas sed officiis nesciunt illum molestiae distinctio et eaque voluptatem! Distinctio, dolores."
-            image="https://source.unsplash.com/random/1920x1080"
+            :links="project.links"
           />
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  async asyncData({ $content }) {
+    const projects = await $content('projects').fetch()
+    return {
+      projects,
+    }
+  },
+})
+</script>
 
 <style lang="scss" scoped>
 @import '@/scss/abstracts';

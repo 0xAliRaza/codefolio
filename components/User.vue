@@ -16,7 +16,7 @@
         </p>
       </div>
       <div class="user__cta">
-        <Button class="me-1" primary nuxt-link="/contact">Contact</Button>
+        <Button class="me-1" primary-glow nuxt-link="/contact">Contact</Button>
         <Button class="" outline-primary nuxt-link="/portfolio"
           >Portfolio</Button
         >

@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "title": "Habitly",
+  "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, numquam perspiciatis? Rem iste ad cum optio deserunt vero quos, obcaecati ut dicta, tempore earum porro a facere! Quidem, atque excepturi.",
+  "image": "https://source.unsplash.com/random/1920x1080",
+  "links": {
+    "liveDemo": "https://0xali.com",
+    "videoDemo": "https://youtube.com/",
+    "sourceCode": "https://github.com/"
+  }
+}

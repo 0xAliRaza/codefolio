@@ -15,17 +15,17 @@ exports[`Header renders correctly 1`] = `
   <nav class="navbar">
     <ul class="navbar__list">
       <li class="navbar__list-item">
-        <nuxtlink-stub to="/portfolio"
-                       class="navbar__link"
-        >
-          Portfolio
-        </nuxtlink-stub>
-      </li>
-      <li class="navbar__list-item">
         <nuxtlink-stub to="/"
                        class="navbar__link"
         >
           About
+        </nuxtlink-stub>
+      </li>
+      <li class="navbar__list-item">
+        <nuxtlink-stub to="/portfolio"
+                       class="navbar__link"
+        >
+          Portfolio
         </nuxtlink-stub>
       </li>
       <li class="navbar__list-item">

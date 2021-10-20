@@ -10,6 +10,32 @@
       <div class="project__description">
         <p>{{ description }}</p>
       </div>
+      <div v-if="links" class="project__links mt-3">
+        <Button
+          v-if="links.sourceCode"
+          class="me-1 mb-2"
+          :link="links.sourceCode"
+          small
+          primary
+          >Live Demo</Button
+        >
+        <Button
+          v-if="links.liveDemo"
+          class="me-1 mb-2"
+          :link="links.liveDemo"
+          small
+          github
+          >Source Code</Button
+        >
+        <Button
+          v-if="links.videoDemo"
+          class="me-1 mb-2"
+          :link="links.videoDemo"
+          small
+          youtube
+          >Video Demo</Button
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -20,6 +46,7 @@ export default Vue.extend({
     title: { required: true, type: String },
     description: { required: true, type: String },
     image: { required: true, type: String },
+    links: { default: null, type: Object },
   },
 })
 </script>
@@ -56,6 +83,13 @@ export default Vue.extend({
     }
   }
   &__image {
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
 </style>
