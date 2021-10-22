@@ -7,5 +7,15 @@
     "liveDemo": "https://0xali.com",
     "demoVideo": "https://youtube.com/",
     "sourceCode": "https://github.com/"
-  }
+  },
+  "technologies": [
+    "HTML",
+    "css",
+    "scss",
+    "javaScript",
+    "angular",
+    "laravel",
+    "git",
+    "docker"
+  ]
 }

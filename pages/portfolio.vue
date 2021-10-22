@@ -8,13 +8,14 @@
         <div
           v-for="project in projects"
           :key="project.id"
-          class="col-12 col-md-8 col-lg-6 mb-4 mb-lg-5"
+          class="col-12 col-md-10 col-lg-6 col-xl-5 mb-4 mb-lg-5"
         >
           <Project
             :title="project.title"
             :description="project.description"
             image="https://source.unsplash.com/random/1920x1080"
             :links="project.links"
+            :technologies="project.technologies"
           />
         </div>
       </div>

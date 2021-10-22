@@ -7,6 +7,32 @@ exports[`Project renders correctly 1`] = `
          alt="test image"
          class="img-fluid"
     >
+    <div class="project__technologies">
+      <span class="project__technology">
+        HTML
+      </span>
+      <span class="project__technology">
+        CSS
+      </span>
+      <span class="project__technology">
+        JavaScript
+      </span>
+      <span class="project__technology">
+        VueJS
+      </span>
+      <span class="project__technology">
+        NuxtJS
+      </span>
+      <span class="project__technology">
+        Docker
+      </span>
+      <span class="project__technology">
+        SCSS
+      </span>
+      <span class="project__technology">
+        Git
+      </span>
+    </div>
   </div>
   <div class="project__details">
     <div class="project__title">
@@ -23,21 +49,18 @@ exports[`Project renders correctly 1`] = `
       <button-stub link="https://github.com/"
                    small
                    primary
-                   class="me-1 mb-2"
       >
         Live Demo
       </button-stub>
       <button-stub link="https://0xali.com"
                    small
                    github
-                   class="me-1 mb-2"
       >
         Source Code
       </button-stub>
       <button-stub link="https://youtube.com/"
                    small
                    youtube
-                   class="me-1 mb-2"
       >
         Video Demo
       </button-stub>

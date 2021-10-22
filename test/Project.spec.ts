@@ -11,6 +11,16 @@ const dummyProps: any = {
     videoDemo: 'https://youtube.com/',
     sourceCode: 'https://github.com/',
   },
+  technologies: [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'VueJS',
+    'NuxtJS',
+    'Docker',
+    'SCSS',
+    'Git',
+  ],
 }
 
 const factory = (props = {}) => {
@@ -32,24 +42,31 @@ describe('Project', () => {
     expect(wrapper.text()).toContain(dummyProps.description)
   })
 
-  it('renders image tag', async () => {
-    const wrapper = await factory(dummyProps)
+  it('renders image tag', () => {
+    const wrapper = factory(dummyProps)
     const img = wrapper.get(`img[src="${dummyProps.image}"]`)
     expect(img).toBeTruthy()
   })
-  it('renders live demo button', async () => {
-    const wrapper = await factory(dummyProps)
+  it('renders live demo button', () => {
+    const wrapper = factory(dummyProps)
     const a = wrapper.get(`button-stub[link="${dummyProps.links.liveDemo}"]`)
     expect(a).toBeTruthy()
   })
-  it('renders source code button', async () => {
-    const wrapper = await factory(dummyProps)
+  it('renders source code button', () => {
+    const wrapper = factory(dummyProps)
     const a = wrapper.get(`button-stub[link="${dummyProps.links.sourceCode}"]`)
     expect(a).toBeTruthy()
   })
-  it('renders video demo button', async () => {
-    const wrapper = await factory(dummyProps)
+  it('renders video demo button', () => {
+    const wrapper = factory(dummyProps)
     const a = wrapper.get(`button-stub[link="${dummyProps.links.videoDemo}"]`)
     expect(a).toBeTruthy()
+  })
+  it('renders all the technologies', () => {
+    const wrapper = factory(dummyProps)
+    const text = wrapper.text()
+    dummyProps.technologies.forEach((tech: string) => {
+      expect(text).toContain(tech)
+    })
   })
 })

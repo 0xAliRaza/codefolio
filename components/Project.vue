@@ -2,6 +2,14 @@
   <div class="project">
     <div class="project__image">
       <img :src="image" alt="test image" class="img-fluid" />
+      <div v-if="technologies" class="project__technologies">
+        <span
+          v-for="tech in technologies"
+          :key="tech"
+          class="project__technology"
+          >{{ tech }}</span
+        >
+      </div>
     </div>
     <div class="project__details">
       <div class="project__title">
@@ -10,10 +18,10 @@
       <div class="project__description">
         <p>{{ description }}</p>
       </div>
-      <div v-if="links" class="project__links mt-3">
+      <div v-if="links" class="project__links">
         <Button
           v-if="links.sourceCode"
-          class="me-1 mb-2"
+          class=""
           :link="links.sourceCode"
           small
           primary
@@ -21,7 +29,7 @@
         >
         <Button
           v-if="links.liveDemo"
-          class="me-1 mb-2"
+          class=""
           :link="links.liveDemo"
           small
           github
@@ -29,7 +37,7 @@
         >
         <Button
           v-if="links.videoDemo"
-          class="me-1 mb-2"
+          class=""
           :link="links.videoDemo"
           small
           youtube
@@ -47,6 +55,7 @@ export default Vue.extend({
     description: { required: true, type: String },
     image: { required: true, type: String },
     links: { default: null, type: Object },
+    technologies: { default: null, type: Array },
   },
 })
 </script>
@@ -54,16 +63,16 @@ export default Vue.extend({
 @import '@/scss/abstracts';
 .project {
   background: transparent;
-  border: 1px solid $gray-2;
-  border-bottom-right-radius: pxToRem(4);
-  border-bottom-left-radius: pxToRem(4);
+  border: 1px solid $gray-300;
+  overflow: hidden;
+  border-radius: 4px;
   cursor: pointer;
   transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
     transform 0.2s ease-in-out;
   @include hocus {
     transform: translateY(-2px);
-    border: 1px solid $gray-3;
-    box-shadow: 0 4px pxToRem(16) rgba($dark, 0.4);
+    border: 1px solid $gray-400;
+    box-shadow: 0 2px pxToRem(16) rgba($gray-800, 0.3);
   }
   &__details {
     padding: pxToRem(16);
@@ -71,7 +80,9 @@ export default Vue.extend({
   &__title {
     h3 {
       font-weight: 600;
-      color: $gray-8;
+      color: $gray-7;
+      font-size: pxToRem(32);
+      // margin: 0 0 pxToRem(12);
     }
   }
   &__description {
@@ -82,14 +93,33 @@ export default Vue.extend({
       color: $gray-7;
     }
   }
-  &__image {
-  }
 
   &__links {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: pxToRem(22) 0;
+    gap: pxToRem(6);
+  }
+
+  &__technologies {
+    padding: 0 pxToRem(16);
+    margin: pxToRem(8) 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: pxToRem(4);
+  }
+  &__technology {
+    line-height: 1.3;
+    text-transform: uppercase;
+    background: $gray-300;
+    color: $gray-600;
+    border-radius: pxToRem(2);
+    padding: pxToRem(6);
+    font-size: pxToRem(12);
+    font-weight: 500;
   }
 }
 </style>
