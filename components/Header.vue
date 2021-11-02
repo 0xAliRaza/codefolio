@@ -23,7 +23,10 @@
       >
       <ul class="navbar__list">
         <li class="navbar__list-item">
-          <NuxtLink class="navbar__link" to="/">About</NuxtLink>
+          <NuxtLink class="navbar__link" to="/">Home</NuxtLink>
+        </li>
+        <li class="navbar__list-item">
+          <NuxtLink class="navbar__link" to="/skills">Skills</NuxtLink>
         </li>
         <li class="navbar__list-item">
           <NuxtLink class="navbar__link" to="/portfolio">Portfolio</NuxtLink>

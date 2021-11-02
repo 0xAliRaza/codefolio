@@ -24,6 +24,6 @@ export default Vue.extend({
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100% - #{$navbar-height});
+  height: 100%;
 }
 </style>
