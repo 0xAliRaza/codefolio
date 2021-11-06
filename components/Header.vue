@@ -123,6 +123,9 @@ export default Vue.extend({
       color: $gray-7;
     }
   }
+  a.nuxt-link-exact-active {
+    color: $gray-7;
+  }
   &__resume-button {
     margin: 0 0 pxToRem(16) 0;
     @include media-breakpoint-up(md) {

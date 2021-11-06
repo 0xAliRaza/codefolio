@@ -8,5 +8,17 @@
     "videoDemo": "https://youtube.com/",
     "sourceCode": "https://github.com/"
   },
-  "technologies": ["HTML", "CSS", "SCSS", "JavaScript", "NuxtJS", "Git"]
+  "technologies": [
+    "HTML",
+    "CSS",
+    "SCSS",
+    "JavaScript",
+    "NuxtJS",
+    "Git",
+    "CSS",
+    "SCSS",
+    "JavaScript",
+    "NuxtJS",
+    "Git"
+  ]
 }
