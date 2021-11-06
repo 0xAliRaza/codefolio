@@ -1,5 +1,5 @@
 <template>
-  <svg-icon :name="name" :title="title" :desc="desc" class="icon"></svg-icon>
+  <svg-icon :name="name" :title="title" :desc="desc"></svg-icon>
 </template>
 
 <script lang="ts">
@@ -7,8 +7,8 @@ import Vue from 'vue'
 export default Vue.extend({
   props: {
     name: { type: String, required: true },
-    title: { type: String, default: 'test title' },
-    desc: { type: String, default: 'test desc' },
+    title: { type: String, default: null },
+    desc: { type: String, default: null },
   },
 })
 </script>
