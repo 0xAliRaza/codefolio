@@ -62,7 +62,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import '@/scss/abstracts';
 .project {
-  background: transparent;
+  background: $light;
   border: 1px solid $gray-300;
   overflow: hidden;
   border-radius: 4px;
@@ -70,7 +70,7 @@ export default Vue.extend({
   transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
     transform 0.2s ease-in-out;
   @include hocus {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
     border: 1px solid $gray-400;
     box-shadow: 0 2px pxToRem(16) rgba($gray-800, 0.3);
   }
