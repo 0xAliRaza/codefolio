@@ -1,30 +1,96 @@
 <template>
   <section class="contact">
-    <div class="contact__heading">
-      <h1>Contact</h1>
-    </div>
-    <div class="contact__box">
-      <div class="contact__buttons">
-        <Button primaryGlow link="mailto:username@mail.com">Email me</Button>
-      </div>
-      <div class="contact__links">
-        <a
-          class="contact__link"
-          href="https://twitter.com/username"
-          target="_blank"
-        >
-          <icon class="contact__icon" name="twitter"></icon>
-        </a>
-        <a
-          class="contact__link"
-          href="https://github.com/username"
-          target="_blank"
-        >
-          <icon class="contact__icon" name="github"></icon>
-        </a>
-        <a class="contact__link" href="username@outlook.com" target="_blank">
-          <icon class="contact__icon" name="skype"></icon>
-        </a>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-7">
+          <div class="contact__heading text-center">
+            <h1>Contact Me</h1>
+          </div>
+          <div class="contact__box">
+            <!-- Add your custom action here (i.e. formspree.io) -->
+            <form action="#" method="POST" class="contact__form">
+              <div class="mb-3">
+                <label for="fullname" class="form-label contact__label"
+                  >Full name</label
+                >
+                <input
+                  id="fullname"
+                  type="text"
+                  class="form-control contact__input"
+                  name="fullname"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label contact__label"
+                  >Email</label
+                >
+                <input
+                  id="email"
+                  type="email"
+                  class="form-control contact__input"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label contact__label"
+                  >Subject</label
+                >
+                <input
+                  id="subject"
+                  type="text"
+                  class="form-control contact__input"
+                  name="subject"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label contact__label"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  class="form-control contact__textarea"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3 d-flex justify-content-end">
+                <Button primary
+                  >Submit <icon name="paperplane" class="ms-1"></icon
+                ></Button>
+              </div>
+            </form>
+            <div class="contact__links">
+              <a class="contact__link" href="mailto:someuser@mail.com">
+                <icon class="contact__icon" name="gmail"></icon>
+              </a>
+              <a
+                class="contact__link"
+                href="https://twitter.com/username"
+                target="_blank"
+              >
+                <icon class="contact__icon" name="twitter"></icon>
+              </a>
+              <a
+                class="contact__link"
+                href="https://github.com/username"
+                target="_blank"
+              >
+                <icon class="contact__icon" name="github"></icon>
+              </a>
+              <a
+                class="contact__link"
+                href="username@outlook.com"
+                target="_blank"
+              >
+                <icon class="contact__icon" name="skype"></icon>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -46,22 +112,9 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import '@/scss/abstracts';
 .contact {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-direction: column;
-  height: 100%;
   &__box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: auto 0;
-    padding: pxToRem(32);
-    max-width: pxToRem(700);
   }
-  &__buttons {
+  &__form {
     margin-bottom: pxToRem(24);
   }
   &__icon {
@@ -84,6 +137,21 @@ export default Vue.extend({
     @include hocus {
       transform: scale(1.2);
       color: $gray-8;
+    }
+  }
+
+  &__label {
+    color: $gray-6;
+    font-size: pxToRem(15);
+  }
+  &__input {
+    min-height: pxToRem(45);
+  }
+  &__input,
+  &__textarea {
+    @include hocus {
+      border: 1px solid rgba($primary, 0.3);
+      box-shadow: 0 0 pxToRem(5) 0 rgba($primary, 0.2);
     }
   }
 }

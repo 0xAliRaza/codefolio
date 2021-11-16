@@ -53,7 +53,9 @@ a.button {
   text-decoration: none;
 }
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: pxToRem(16);
   font-weight: 400;
   line-height: 1.5;
