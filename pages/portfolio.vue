@@ -2,7 +2,7 @@
   <section class="portfolio">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-12 text-center mb-4">
+        <div class="col-12 text-center mb-5 mt-3">
           <h1>Portfolio</h1>
         </div>
         <div

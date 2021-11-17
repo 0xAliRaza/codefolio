@@ -1,8 +1,8 @@
 <template>
   <section class="skills">
-    <div class="skills__heading">
+    <div class="skills__heading my-3">
       <h1>Skills</h1>
-    </div>
+    </div>  
     <div class="skills__box">
       <div v-for="skill in skills.skills" :key="skill" class="skills__tag">
         {{ skill }}

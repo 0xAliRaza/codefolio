@@ -1,98 +1,84 @@
 <template>
   <section class="contact">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-10 col-lg-7">
-          <div class="contact__heading text-center">
-            <h1>Contact Me</h1>
-          </div>
-          <div class="contact__box">
-            <!-- Add your custom action here (i.e. formspree.io) -->
-            <form action="#" method="POST" class="contact__form">
-              <div class="mb-3">
-                <label for="fullname" class="form-label contact__label"
-                  >Full name</label
-                >
-                <input
-                  id="fullname"
-                  type="text"
-                  class="form-control contact__input"
-                  name="fullname"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label contact__label"
-                  >Email</label
-                >
-                <input
-                  id="email"
-                  type="email"
-                  class="form-control contact__input"
-                  name="email"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="subject" class="form-label contact__label"
-                  >Subject</label
-                >
-                <input
-                  id="subject"
-                  type="text"
-                  class="form-control contact__input"
-                  name="subject"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label contact__label"
-                  >Message</label
-                >
-                <textarea
-                  id="message"
-                  class="form-control contact__textarea"
-                  name="message"
-                  rows="4"
-                  required
-                ></textarea>
-              </div>
-              <div class="mb-3 d-flex justify-content-end">
-                <Button primary
-                  >Submit <icon name="paperplane" class="ms-1"></icon
-                ></Button>
-              </div>
-            </form>
-            <div class="contact__links">
-              <a class="contact__link" href="mailto:someuser@mail.com">
-                <icon class="contact__icon" name="gmail"></icon>
-              </a>
-              <a
-                class="contact__link"
-                href="https://twitter.com/username"
-                target="_blank"
-              >
-                <icon class="contact__icon" name="twitter"></icon>
-              </a>
-              <a
-                class="contact__link"
-                href="https://github.com/username"
-                target="_blank"
-              >
-                <icon class="contact__icon" name="github"></icon>
-              </a>
-              <a
-                class="contact__link"
-                href="username@outlook.com"
-                target="_blank"
-              >
-                <icon class="contact__icon" name="skype"></icon>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+
+    <div class="contact__heading text-center my-3">
+      <h1>Contact</h1>
     </div>
+    <!-- Add your custom action here (i.e. formspree.io) -->
+    <div class="contact__form-container">
+      <form action="#" method="POST" class="contact__form">
+        <div class="mb-3">
+          <label for="fullname" class="form-label contact__label"
+            >Full name</label
+          >
+          <input
+            id="fullname"
+            type="text"
+            class="form-control contact__input"
+            name="fullname"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label contact__label">Email</label>
+          <input
+            id="email"
+            type="email"
+            class="form-control contact__input"
+            name="email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label contact__label">Subject</label>
+          <input
+            id="subject"
+            type="text"
+            class="form-control contact__input"
+            name="subject"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label contact__label">Message</label>
+          <textarea
+            id="message"
+            class="form-control contact__textarea"
+            name="message"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3 d-flex justify-content-end">
+          <Button primary
+            >Submit <icon name="paperplane" class="ms-1"></icon
+          ></Button>
+        </div>
+      </form>
+    </div>
+    <div class="contact__links">
+      <a class="contact__link" href="mailto:someuser@mail.com">
+        <icon class="contact__icon" name="gmail"></icon>
+      </a>
+      <a
+        class="contact__link"
+        href="https://twitter.com/username"
+        target="_blank"
+      >
+        <icon class="contact__icon" name="twitter"></icon>
+      </a>
+      <a
+        class="contact__link"
+        href="https://github.com/username"
+        target="_blank"
+      >
+        <icon class="contact__icon" name="github"></icon>
+      </a>
+      <a class="contact__link" href="username@outlook.com" target="_blank">
+        <icon class="contact__icon" name="skype"></icon>
+      </a>
+    </div>
+
   </section>
 </template>
 
@@ -112,10 +98,21 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import '@/scss/abstracts';
 .contact {
-  &__box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  &__form-container {
+    display: flex;
+    justify-content: center;
   }
   &__form {
-    margin-bottom: pxToRem(24);
+    padding: pxToRem(16);
+    flex-basis: pxToRem(650);
+    @include media-breakpoint-up(lg) {
+      flex-basis: pxToRem(750);
+    }
   }
   &__icon {
     width: 2em;
@@ -127,6 +124,7 @@ export default Vue.extend({
     justify-content: center;
     flex-wrap: wrap;
     grid-gap: pxToRem(8);
+    padding: pxToRem(32);
   }
   &__link {
     backface-visibility: hidden;
@@ -149,6 +147,7 @@ export default Vue.extend({
   }
   &__input,
   &__textarea {
+    border: 1px solid rgba($gray-2, 0.7);
     @include hocus {
       border: 1px solid rgba($primary, 0.3);
       box-shadow: 0 0 pxToRem(5) 0 rgba($primary, 0.2);

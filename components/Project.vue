@@ -20,29 +20,35 @@
       </div>
       <div v-if="links" class="project__links">
         <Button
-          v-if="links.sourceCode"
-          class=""
-          :link="links.sourceCode"
-          small
-          primary
-          >Live Demo</Button
-        >
-        <Button
           v-if="links.liveDemo"
           class=""
           :link="links.liveDemo"
           small
+          primary
+          title="Live Demo"
+          >Demo
+          <icon name="globe" class="ms-1" />
+        </Button>
+        <Button
+          v-if="links.sourceCode"
+          class=""
+          :link="links.sourceCode"
+          small
           github
-          >Source Code</Button
-        >
+          title="Source Code"
+          >Source
+          <icon name="github" class="ms-1" />
+        </Button>
         <Button
           v-if="links.videoDemo"
           class=""
           :link="links.videoDemo"
           small
           youtube
-          >Video Demo</Button
-        >
+          title="Video Demo"
+          >Video
+          <icon name="youtubeplay" class="ms-1" />
+        </Button>
       </div>
     </div>
   </div>
@@ -63,14 +69,17 @@ export default Vue.extend({
 @import '@/scss/abstracts';
 .project {
   background: $light;
-  border: 1px solid $gray-300;
+  border: 1px solid $gray-200;
   overflow: hidden;
-  border-radius: 4px;
-  cursor: pointer;
+  max-width: pxToRem(480);
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: pxToRem(6px);
+  cursor: default;
   transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
     transform 0.2s ease-in-out;
   @include hocus {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     border: 1px solid $gray-400;
     box-shadow: 0 2px pxToRem(16) rgba($gray-800, 0.3);
   }
@@ -80,9 +89,8 @@ export default Vue.extend({
   &__title {
     h3 {
       font-weight: 600;
-      color: $gray-7;
-      font-size: pxToRem(32);
-      // margin: 0 0 pxToRem(12);
+      color: $gray-800;
+      font-size: pxToRem(26);
     }
   }
   &__description {
@@ -90,7 +98,7 @@ export default Vue.extend({
       font-size: pxToRem(15);
       line-height: 1.5em;
       margin: 0;
-      color: $gray-7;
+      color: $gray-700;
     }
   }
 
@@ -114,10 +122,10 @@ export default Vue.extend({
   &__technology {
     line-height: 1.3;
     text-transform: uppercase;
-    background: $gray-300;
+    background: $gray-200;
     color: $gray-600;
-    border-radius: pxToRem(2);
-    padding: pxToRem(6);
+    border-radius: pxToRem(4);
+    padding: pxToRem(5);
     font-size: pxToRem(12);
     font-weight: 500;
   }

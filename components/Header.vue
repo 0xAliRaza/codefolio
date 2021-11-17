@@ -6,7 +6,7 @@
         navbar__toggler: true,
         'navbar__toggler--crossed': navbarVisible,
       }"
-      @click="navbarVisible = !navbarVisible"
+      @click="toggleNavbar"
     >
       <span></span>
       <span></span>
@@ -19,28 +19,27 @@
         small
         outline-gray
         class="navbar__resume-button"
-        >Resume</Button
-      >
+        @click="toggleNavbar"
+        >Resume <icon class="ms-1" name="resume"
+      /></Button>
       <ul class="navbar__list">
-        <li class="navbar__list-item">
+        <li class="navbar__list-item" @click="toggleNavbar">
           <NuxtLink class="navbar__link" to="/">Home</NuxtLink>
         </li>
-        <li class="navbar__list-item">
+        <li class="navbar__list-item" @click="toggleNavbar">
           <NuxtLink class="navbar__link" to="/skills">Skills</NuxtLink>
         </li>
-        <li class="navbar__list-item">
+        <li class="navbar__list-item" @click="toggleNavbar">
           <NuxtLink class="navbar__link" to="/portfolio">Portfolio</NuxtLink>
         </li>
-        <li class="navbar__list-item">
+        <li class="navbar__list-item" @click="toggleNavbar">
           <NuxtLink class="navbar__link" to="/contact">Contact</NuxtLink>
         </li>
-        <!-- <li class="navbar__list-item">
-          <NuxtLink class="navbar__link" to="/skills">Skills</NuxtLink>
-        </li> -->
         <li
           v-for="link in externalLinks"
           :key="link.url"
           class="navbar__list-item"
+          @click="toggleNavbar"
         >
           <a class="navbar__link" :href="link.url" target="_blank"
             >{{ link.text }}
@@ -66,6 +65,11 @@ export default Vue.extend({
       navbarVisible: false,
     }
   },
+  methods: {
+    toggleNavbar: function () {
+      this.navbarVisible = !this.navbarVisible
+    },
+  },
 })
 </script>
 <style lang="scss" scoped>
@@ -79,6 +83,7 @@ export default Vue.extend({
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 999;
   height: 100%;
   width: 100%;
   background-color: transparent;
@@ -86,6 +91,7 @@ export default Vue.extend({
   padding: pxToRem(20) pxToRem(10);
   &--show {
     display: flex;
+    background-color: $gray-1;
   }
   @include media-breakpoint-up(md) {
     display: flex;
@@ -151,7 +157,7 @@ export default Vue.extend({
       position: relative;
       background: $gray-7;
       border-radius: pxToRem(3);
-      z-index: 200;
+      z-index: 1000;
       transform-origin: pxToRem(4) 0px;
       transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1),
         background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.2s ease;

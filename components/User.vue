@@ -50,6 +50,7 @@ export default Vue.extend({
     flex-direction: row;
   }
   &__image-container {
+    user-select: none;
     padding: pxToRem(16);
     @include media-breakpoint-down(md) {
       margin-bottom: pxToRem(16);
@@ -87,7 +88,7 @@ export default Vue.extend({
   &__title {
     font-size: pxToRem(14);
     font-weight: 300;
-    color: $gray-5;
+    color: rgba($gray-600, .8);
     margin: 0 0 pxToRem(8);
     @include media-breakpoint-up(md) {
       font-size: pxToRem(16);
@@ -98,6 +99,7 @@ export default Vue.extend({
     margin: 0 0 pxToRem(12);
     font-size: pxToRem(32);
     font-weight: 600;
+    color: $gray-900;
     @include media-breakpoint-up(md) {
       line-height: pxToRem(50);
       font-size: pxToRem(48);
@@ -109,10 +111,13 @@ export default Vue.extend({
     p {
       font-size: pxToRem(14);
       font-weight: 400;
-      color: $gray-7;
+      color: $gray-700;
       margin: 0;
       line-height: 1.75em;
     }
+  }
+  &__cta {
+    user-select: none;
   }
 }
 </style>

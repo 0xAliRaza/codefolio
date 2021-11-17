@@ -77,7 +77,8 @@ a.button {
     border-color: $primary;
     color: $light;
     @include hocus {
-      background-color: darken($primary, 8%);
+      background-color: darken($primary, 10);
+      border-color: darken($primary, 10);
     }
   }
   &--primary-glow {
@@ -87,21 +88,21 @@ a.button {
     @include glow($primary);
   }
   &--youtube {
-    background-color: transparent;
+    background-color: $youtube;
     border-color: $youtube;
-    color: $youtube;
+    color: $light;
     @include hocus-active {
-      background-color: $youtube;
-      color: $light;
+      background-color: darken($youtube, 10);
+      border-color: darken($youtube, 10);
     }
   }
   &--github {
-    background-color: transparent;
+    background-color: $github;
     border-color: $github;
-    color: $github;
+    color: $light;
     @include hocus-active {
-      background-color: $github;
-      color: $light;
+      background-color: darken($github, 10);
+      border-color: darken($github, 10);
     }
   }
   &--outline {
