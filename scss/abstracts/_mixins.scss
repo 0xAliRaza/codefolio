@@ -12,8 +12,15 @@
   }
 }
 
+@mixin hoctive {
+  &:hover,
+  &:active {
+    @content;
+  }
+}
+
 @mixin glow($color) {
-    box-shadow: 0 2px pxToRem(16) rgba($color, 0.3);
+  box-shadow: 0 2px pxToRem(16) rgba($color, 0.3);
   @include hocus {
     box-shadow: 0 2px pxToRem(20) rgba($color, 0.6);
   }

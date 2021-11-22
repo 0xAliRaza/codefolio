@@ -1,14 +1,22 @@
 <template>
-  <section class="skills">
-    <div class="skills__heading my-3">
-      <h1>Skills</h1>
-    </div>  
-    <div class="skills__box">
-      <div v-for="skill in skills.skills" :key="skill" class="skills__tag">
-        {{ skill }}
-      </div>
-    </div>
-  </section>
+  <div class="h-100">
+    <Header
+      :resume-url="navbar.resumeUrl"
+      :external-links="navbar.externalLinks"
+    />
+    <main class="pt-navbar h-100">
+      <section class="skills">
+        <div class="skills__heading my-3">
+          <h1>Skills</h1>
+        </div>
+        <div class="skills__box">
+          <div v-for="skill in skills.skills" :key="skill" class="skills__tag">
+            {{ skill }}
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 </template>
 
 <script lang="ts">
@@ -17,8 +25,10 @@ import Vue from 'vue'
 export default Vue.extend({
   async asyncData({ $content }) {
     const skills = await $content('skills').fetch()
+    const navbar = await $content('navbar').fetch()
     return {
       skills,
+      navbar,
     }
   },
 })

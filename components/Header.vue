@@ -13,15 +13,6 @@
       <span></span>
     </div>
     <nav class="navbar" :class="{ 'navbar--show': navbarVisible }">
-      <Button
-        v-if="resumeUrl"
-        :link="resumeUrl"
-        small
-        outline-gray
-        class="navbar__resume-button"
-        @click="toggleNavbar"
-        >Resume <icon class="ms-1" name="resume"
-      /></Button>
       <ul class="navbar__list">
         <li class="navbar__list-item" @click="toggleNavbar">
           <NuxtLink class="navbar__link" to="/">Home</NuxtLink>
@@ -35,6 +26,8 @@
         <li class="navbar__list-item" @click="toggleNavbar">
           <NuxtLink class="navbar__link" to="/contact">Contact</NuxtLink>
         </li>
+      </ul>
+      <ul class="navbar__list">
         <li
           v-for="link in externalLinks"
           :key="link.url"
@@ -45,6 +38,17 @@
             >{{ link.text }}
             <icon name="external-link" desc="resume icon" class="ms-1"></icon
           ></a>
+        </li>
+        <li class="navbar__list-item">
+          <Button
+            v-if="resumeUrl"
+            :link="resumeUrl"
+            small
+            outline-gray
+            class="navbar__resume-button"
+            @click="toggleNavbar"
+            >Resume <icon class="ms-1" name="resume"
+          /></Button>
         </li>
       </ul>
     </nav>
@@ -96,7 +100,7 @@ export default Vue.extend({
   @include media-breakpoint-up(md) {
     display: flex;
     height: $navbar-height;
-    justify-content: flex-end;
+    justify-content: space-around;
     flex-direction: row;
   }
 
@@ -125,7 +129,7 @@ export default Vue.extend({
     text-decoration: none;
     padding: pxToRem(12) pxToRem(16);
     transition: color 0.15s ease-in-out;
-    @include hocus {
+    @include hoctive {
       color: $gray-7;
     }
   }
@@ -133,9 +137,9 @@ export default Vue.extend({
     color: $gray-7;
   }
   &__resume-button {
-    margin: 0 0 pxToRem(16) 0;
+    margin: pxToRem(16) 0 0 0;
     @include media-breakpoint-up(md) {
-      margin: 0 pxToRem(16) 0 0;
+      margin: 0 0 0 pxToRem(16);
     }
   }
 
