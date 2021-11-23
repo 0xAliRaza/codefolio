@@ -25,3 +25,40 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+
+/* Text selection styles */
+::-moz-selection {
+  color: $light;
+  background: $primary;
+}
+
+::selection {
+  color: $light;
+  background: $primary;
+}
+
+
+
+/* Scrollbar customizations */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $gray-1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($gray-6, .7);
+  border-radius: pxToRem(8);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $gray-6;
+}
+

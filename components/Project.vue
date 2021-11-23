@@ -75,7 +75,6 @@ export default Vue.extend({
   margin-right: auto;
   margin-left: auto;
   border-radius: pxToRem(6px);
-  cursor: default;
   transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
     transform 0.2s ease-in-out;
   @include hocus {

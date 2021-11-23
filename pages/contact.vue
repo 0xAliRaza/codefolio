@@ -144,7 +144,7 @@ export default Vue.extend({
     display: inline-flex;
     color: $gray-6;
     transition: all 0.2s ease;
-    @include hocus {
+    @include hoctive {
       transform: scale(1.2);
       color: $gray-8;
     }
