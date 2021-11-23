@@ -4,8 +4,8 @@
       <img :src="image" alt="test image" class="img-fluid" />
       <div v-if="technologies" class="project__technologies">
         <span
-          v-for="tech in technologies"
-          :key="tech"
+          v-for="(tech, i) in technologies"
+          :key="tech + i"
           class="project__technology"
           >{{ tech }}</span
         >
