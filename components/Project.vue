@@ -27,7 +27,7 @@
           primary
           title="Live Demo"
           >Demo
-          <icon name="globe" class="ms-1" />
+          <Icon name="globe" class="ms-1" />
         </Button>
         <Button
           v-if="links.sourceCode"
@@ -37,7 +37,7 @@
           github
           title="Source Code"
           >Source
-          <icon name="github" class="ms-1" />
+          <Icon name="github" class="ms-1" />
         </Button>
         <Button
           v-if="links.videoDemo"
@@ -47,7 +47,7 @@
           youtube
           title="Video Demo"
           >Video
-          <icon name="youtubeplay" class="ms-1" />
+          <Icon name="youtubeplay" class="ms-1" />
         </Button>
       </div>
     </div>

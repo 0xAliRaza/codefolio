@@ -45,24 +45,39 @@ exports[`Project renders correctly 1`] = `
         test_description_ljsdfljk128734
       </p>
     </div>
-    <div class="project__links mt-3">
-      <button-stub link="https://github.com/"
-                   small
-                   primary
-      >
-        Live Demo
-      </button-stub>
+    <div class="project__links">
       <button-stub link="https://0xali.com"
                    small
-                   github
+                   primary
+                   title="Live Demo"
       >
-        Source Code
+        Demo
+        <icon-stub name="globe"
+                   class="ms-1"
+        >
+        </icon-stub>
+      </button-stub>
+      <button-stub link="https://github.com/"
+                   small
+                   github
+                   title="Source Code"
+      >
+        Source
+        <icon-stub name="github"
+                   class="ms-1"
+        >
+        </icon-stub>
       </button-stub>
       <button-stub link="https://youtube.com/"
                    small
                    youtube
+                   title="Video Demo"
       >
-        Video Demo
+        Video
+        <icon-stub name="youtubeplay"
+                   class="ms-1"
+        >
+        </icon-stub>
       </button-stub>
     </div>
   </div>

@@ -1,9 +1,9 @@
 import { shallowMount } from '@vue/test-utils'
-import skills from '@/pages/skills.vue'
+import contact from '@/pages/contact.vue'
 
-describe('skills', () => {
+describe('contact', () => {
   it('renders correctly', () => {
-    const wrapper = shallowMount(skills, {
+    const wrapper = shallowMount(contact, {
       data() {
         return {
           navbar: { resumeUrl: '', externalLinks: [] },
@@ -27,7 +27,7 @@ describe('skills', () => {
           },
         }
       },
-      stubs: ['Icon'],
+      stubs: ['Icon']
     })
     expect(wrapper.html()).toMatchSnapshot()
   })

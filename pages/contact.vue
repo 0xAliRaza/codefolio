@@ -60,31 +60,31 @@
             </div>
             <div class="mb-3 d-flex justify-content-end">
               <Button primary
-                >Submit <icon name="paperplane" class="ms-1"></icon
-              ></Button>
+                >Submit <Icon name="paperplane" class="ms-1"
+              /></Button>
             </div>
           </form>
         </div>
         <div class="contact__links">
           <a class="contact__link" href="mailto:someuser@mail.com">
-            <icon class="contact__icon" name="gmail"></icon>
+            <Icon class="contact__icon" name="gmail" />
           </a>
           <a
             class="contact__link"
             href="https://twitter.com/username"
             target="_blank"
           >
-            <icon class="contact__icon" name="twitter"></icon>
+            <Icon class="contact__icon" name="twitter" />
           </a>
           <a
             class="contact__link"
             href="https://github.com/username"
             target="_blank"
           >
-            <icon class="contact__icon" name="github"></icon>
+            <Icon class="contact__icon" name="github" />
           </a>
           <a class="contact__link" href="username@outlook.com" target="_blank">
-            <icon class="contact__icon" name="skype"></icon>
+            <Icon class="contact__icon" name="skype" />
           </a>
         </div>
       </section>

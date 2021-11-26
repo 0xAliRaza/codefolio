@@ -4,7 +4,6 @@ exports[`Icon should render properly 1`] = `
 <svg-icon-stub name="test_name"
                title="Test title"
                desc="Test Desc"
-               class="icon"
 >
 </svg-icon-stub>
 `;

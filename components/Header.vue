@@ -36,8 +36,8 @@
         >
           <a class="navbar__link" :href="link.url" target="_blank"
             >{{ link.text }}
-            <icon name="external-link" desc="resume icon" class="ms-1"></icon
-          ></a>
+            <Icon name="external-link" desc="resume icon" class="ms-1"
+          /></a>
         </li>
         <li class="navbar__list-item">
           <Button
@@ -47,7 +47,7 @@
             outline-gray
             class="navbar__resume-button"
             @click="toggleNavbar"
-            >Resume <icon class="ms-1" name="resume"
+            >Resume <Icon class="ms-1" name="resume"
           /></Button>
         </li>
       </ul>

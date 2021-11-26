@@ -24,7 +24,10 @@ const dummyProps: any = {
 }
 
 const factory = (props = {}) => {
-  return shallowMount(Project, { propsData: { ...props }, stubs: ['Button'] })
+  return shallowMount(Project, {
+    propsData: { ...props },
+    stubs: ['Button', 'Icon'],
+  })
 }
 describe('Project', () => {
   it('renders correctly', () => {

@@ -18,7 +18,14 @@ exports[`Header renders correctly 1`] = `
         <nuxtlink-stub to="/"
                        class="navbar__link"
         >
-          About
+          Home
+        </nuxtlink-stub>
+      </li>
+      <li class="navbar__list-item">
+        <nuxtlink-stub to="/skills"
+                       class="navbar__link"
+        >
+          Skills
         </nuxtlink-stub>
       </li>
       <li class="navbar__list-item">
@@ -34,6 +41,10 @@ exports[`Header renders correctly 1`] = `
         >
           Contact
         </nuxtlink-stub>
+      </li>
+    </ul>
+    <ul class="navbar__list">
+      <li class="navbar__list-item">
       </li>
     </ul>
   </nav>

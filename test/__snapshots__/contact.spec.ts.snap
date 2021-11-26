@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`contact renders correctly 1`] = `
+<div>
+  <header resume-url
+          external-links
+  >
+  </header>
+  <main class="main">
+    <section class="contact">
+      <div class="contact__heading text-center my-3">
+        <h1>
+          Contact
+        </h1>
+      </div>
+      <div class="contact__form-container">
+        <form action="#"
+              method="POST"
+              class="contact__form"
+        >
+          <div class="mb-3">
+            <label for="fullname"
+                   class="form-label contact__label"
+            >
+              Full name
+            </label>
+            <input id="fullname"
+                   type="text"
+                   name="fullname"
+                   required="required"
+                   class="form-control contact__input"
+            >
+          </div>
+          <div class="mb-3">
+            <label for="email"
+                   class="form-label contact__label"
+            >
+              Email
+            </label>
+            <input id="email"
+                   type="email"
+                   name="email"
+                   required="required"
+                   class="form-control contact__input"
+            >
+          </div>
+          <div class="mb-3">
+            <label for="subject"
+                   class="form-label contact__label"
+            >
+              Subject
+            </label>
+            <input id="subject"
+                   type="text"
+                   name="subject"
+                   required="required"
+                   class="form-control contact__input"
+            >
+          </div>
+          <div class="mb-3">
+            <label for="message"
+                   class="form-label contact__label"
+            >
+              Message
+            </label>
+            <textarea id="message"
+                      name="message"
+                      rows="4"
+                      required="required"
+                      class="form-control contact__textarea"
+            >
+            </textarea>
+          </div>
+          <div class="mb-3 d-flex justify-content-end">
+            <button primary>
+              Submit
+              <icon-stub name="paperplane"
+                         class="ms-1"
+              >
+              </icon-stub>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="contact__links">
+        <a href="mailto:someuser@mail.com"
+           class="contact__link"
+        >
+          <icon-stub name="gmail"
+                     class="contact__icon"
+          >
+          </icon-stub>
+        </a>
+        <a href="https://twitter.com/username"
+           target="_blank"
+           class="contact__link"
+        >
+          <icon-stub name="twitter"
+                     class="contact__icon"
+          >
+          </icon-stub>
+        </a>
+        <a href="https://github.com/username"
+           target="_blank"
+           class="contact__link"
+        >
+          <icon-stub name="github"
+                     class="contact__icon"
+          >
+          </icon-stub>
+        </a>
+        <a href="username@outlook.com"
+           target="_blank"
+           class="contact__link"
+        >
+          <icon-stub name="skype"
+                     class="contact__icon"
+          >
+          </icon-stub>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+  </footer>
+</div>
+`;

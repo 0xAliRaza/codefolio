@@ -1,15 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`portfolio renders correctly 1`] = `
-<section class="portfolio">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 text-center mb-4">
-        <h1>
-          Portfolio
-        </h1>
+<div>
+  <header resume-url
+          external-links
+  >
+  </header>
+  <main class="main">
+    <section class="portfolio">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center mb-5 mt-3">
+            <h1>
+              Portfolio
+            </h1>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+  </main>
+  <footer>
+  </footer>
+</div>
 `;
