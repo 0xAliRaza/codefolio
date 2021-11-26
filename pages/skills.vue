@@ -1,10 +1,10 @@
 <template>
-  <div class="h-100">
+  <div>
     <Header
       :resume-url="navbar.resumeUrl"
       :external-links="navbar.externalLinks"
     />
-    <main class="pt-navbar h-100">
+    <main class="main">
       <section class="skills">
         <div class="skills__heading my-3">
           <h1>Skills</h1>
@@ -16,6 +16,7 @@
         </div>
       </section>
     </main>
+    <Footer />
   </div>
 </template>
 
@@ -41,14 +42,15 @@ export default Vue.extend({
   align-items: center;
   justify-content: start;
   flex-direction: column;
-  height: 100%;
+  padding: pxToRem(10);
+  @include full-height;
   &__box {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
     margin: auto;
-    padding: pxToRem(32);
+    padding: pxToRem(24);
     max-width: pxToRem(700);
   }
   &__tag {

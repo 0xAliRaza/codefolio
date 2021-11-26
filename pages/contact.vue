@@ -1,10 +1,10 @@
 <template>
-  <div class="h-100">
+  <div>
     <Header
       :resume-url="navbar.resumeUrl"
       :external-links="navbar.externalLinks"
     />
-    <main class="pt-navbar h-100">
+    <main class="main">
       <section class="contact">
         <div class="contact__heading text-center my-3">
           <h1>Contact</h1>
@@ -89,6 +89,7 @@
         </div>
       </section>
     </main>
+    <Footer />
   </div>
 </template>
 
@@ -110,7 +111,8 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import '@/scss/abstracts';
 .contact {
-  height: 100%;
+  padding: pxToRem(10);
+  @include full-height;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -136,7 +138,8 @@ export default Vue.extend({
     justify-content: center;
     flex-wrap: wrap;
     grid-gap: pxToRem(8);
-    padding: pxToRem(32);
+    padding: pxToRem(24);
+    z-index: 200;
   }
   &__link {
     backface-visibility: hidden;

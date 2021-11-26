@@ -84,24 +84,24 @@ export default Vue.extend({
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: $gray-1;
+  padding: pxToRem(20) pxToRem(10);
   top: 0;
   left: 0;
   z-index: 999;
-  height: 100%;
-  width: 100%;
-  background-color: transparent;
-  padding: pxToRem(20);
-  padding: pxToRem(20) pxToRem(10);
   &--show {
+    position: fixed;
     display: flex;
-    background-color: $gray-1;
   }
   @include media-breakpoint-up(md) {
-    display: flex;
+    position: absolute;
     height: $navbar-height;
-    justify-content: space-around;
+    display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    background-color: transparent;
   }
 
   @include media-breakpoint-up(lg) {
@@ -146,10 +146,11 @@ export default Vue.extend({
   &__toggler {
     padding: pxToRem(10);
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     top: pxToRem(10);
     right: pxToRem(10);
     display: block;
+    z-index: 1000;
     @include media-breakpoint-up(md) {
       display: none;
     }
@@ -161,7 +162,6 @@ export default Vue.extend({
       position: relative;
       background: $gray-7;
       border-radius: pxToRem(3);
-      z-index: 1000;
       transform-origin: pxToRem(4) 0px;
       transition: transform 0.2s cubic-bezier(0.77, 0.2, 0.05, 1),
         background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.2s ease;

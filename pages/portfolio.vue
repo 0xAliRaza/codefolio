@@ -1,10 +1,10 @@
 <template>
-  <div class="h-100">
+  <div>
     <Header
       :resume-url="navbar.resumeUrl"
       :external-links="navbar.externalLinks"
     />
-    <main class="pt-navbar h-100">
+    <main class="main">
       <section class="portfolio">
         <div class="container">
           <div class="row justify-content-center">
@@ -28,6 +28,7 @@
         </div>
       </section>
     </main>
+    <Footer />
   </div>
 </template>
 
@@ -49,5 +50,6 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import '@/scss/abstracts';
 .portfolio {
+  padding: pxToRem(10) 0;
 }
 </style>

@@ -1,14 +1,15 @@
 <template>
-  <div class="h-100">
+  <div>
     <Header
       :resume-url="navbar.resumeUrl"
       :external-links="navbar.externalLinks"
     />
-    <main class="pt-navbar h-100">
+    <main class="main">
       <section class="about">
         <User :user="user" />
       </section>
     </main>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -34,6 +35,6 @@ export default Vue.extend({
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  @include full-height;
 }
 </style>

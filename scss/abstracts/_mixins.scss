@@ -25,3 +25,8 @@
     box-shadow: 0 2px pxToRem(20) rgba($color, 0.6);
   }
 }
+
+
+@mixin full-height {
+  min-height: calc(100vh - #{$navbar-height} - #{$footer-height});
+}

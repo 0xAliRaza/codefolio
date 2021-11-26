@@ -19,6 +19,10 @@ body {
   box-sizing: inherit;
 }
 
+main.main {
+  padding-top: $navbar-height;
+}
+
 ol,
 ul {
   list-style: none;
@@ -43,7 +47,7 @@ ul {
 /* Scrollbar customizations */
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
@@ -53,12 +57,14 @@ ul {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba($gray-6, .7);
-  border-radius: pxToRem(8);
+  background: $gray-5;
+  border: 1px solid darken($gray-5, 4);
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: $gray-6;
+  border: 1px solid darken($gray-6, 4);
 }
 
