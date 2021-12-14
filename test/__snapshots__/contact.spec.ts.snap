@@ -83,15 +83,16 @@ exports[`contact renders correctly 1`] = `
         </form>
       </div>
       <div class="contact__links">
-        <a href="mailto:someuser@mail.com"
+        <a href="#"
+           target="_blank"
            class="contact__link"
         >
-          <icon-stub name="gmail"
+          <icon-stub name="discord"
                      class="contact__icon"
           >
           </icon-stub>
         </a>
-        <a href="https://twitter.com/username"
+        <a href="#"
            target="_blank"
            class="contact__link"
         >
@@ -100,20 +101,11 @@ exports[`contact renders correctly 1`] = `
           >
           </icon-stub>
         </a>
-        <a href="https://github.com/username"
+        <a href="#"
            target="_blank"
            class="contact__link"
         >
-          <icon-stub name="github"
-                     class="contact__icon"
-          >
-          </icon-stub>
-        </a>
-        <a href="username@outlook.com"
-           target="_blank"
-           class="contact__link"
-        >
-          <icon-stub name="skype"
+          <icon-stub name="facebook"
                      class="contact__icon"
           >
           </icon-stub>

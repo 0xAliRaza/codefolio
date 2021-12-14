@@ -25,9 +25,17 @@ describe('contact', () => {
               'Webpack',
             ],
           },
+          contact: {
+            formAction: '#',
+            socialIcons: [
+              { name: 'discord', url: '#' },
+              { name: 'twitter', url: '#' },
+              { name: 'facebook', url: '#' },
+            ],
+          },
         }
       },
-      stubs: ['Icon']
+      stubs: ['Icon'],
     })
     expect(wrapper.html()).toMatchSnapshot()
   })
