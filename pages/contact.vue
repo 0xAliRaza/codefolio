@@ -11,7 +11,7 @@
         </div>
         <!-- Add your custom action here (i.e. formspree.io) -->
         <div class="contact__form-container">
-          <form action="#" method="POST" class="contact__form">
+          <form v-if="contact" :action="contact.formAction" method="POST" class="contact__form">
             <div class="mb-3">
               <label for="fullname" class="form-label contact__label"
                 >Full name</label
@@ -66,25 +66,8 @@
           </form>
         </div>
         <div class="contact__links">
-          <a class="contact__link" href="mailto:someuser@mail.com">
-            <Icon class="contact__icon" name="gmail" />
-          </a>
-          <a
-            class="contact__link"
-            href="https://twitter.com/username"
-            target="_blank"
-          >
-            <Icon class="contact__icon" name="twitter" />
-          </a>
-          <a
-            class="contact__link"
-            href="https://github.com/username"
-            target="_blank"
-          >
-            <Icon class="contact__icon" name="github" />
-          </a>
-          <a class="contact__link" href="username@outlook.com" target="_blank">
-            <Icon class="contact__icon" name="skype" />
+          <a v-for="icon in contact.socialIcons" :key="icon.name" class="contact__link" :href="icon.url" target="_blank">
+            <Icon class="contact__icon" :name="icon.name" />
           </a>
         </div>
       </section>
@@ -100,9 +83,11 @@ export default Vue.extend({
   async asyncData({ $content }) {
     const skills = await $content('skills').fetch()
     const navbar = await $content('navbar').fetch()
+    const contact = await $content('contact').fetch()
     return {
       skills,
       navbar,
+      contact
     }
   },
 })
@@ -129,8 +114,8 @@ export default Vue.extend({
     }
   }
   &__icon {
-    width: 2em;
-    height: 2em;
+    width: 2em!important;
+    height: 2em!important;
   }
   &__links {
     display: flex;

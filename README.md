@@ -60,7 +60,7 @@ content
 ```
 Let's see what each file or folder is for.
 
-### **`navbar.json`**
+### **navbar.json**
 
 This file is used for optional data related to top navbar.
 
@@ -69,7 +69,7 @@ This file is used for optional data related to top navbar.
 | **resumeUrl** | `string` | Resume file URL for navbar resume button. |
 | **externalLinks** | `array` | An array containing objects to generate external links in the top navbar. Each external link object needs to have `text` and `url` string properties to function properly.
 
-### **`skills.json`**
+### **skills.json**
 
 This file is used for user skills.
 
@@ -77,7 +77,7 @@ This file is used for user skills.
 | --- | --- | --- |
 | **skills** | `array` | An array containing all the skills (strings) to generate skills page. |
 
-### **`user.json`**
+### **user.json**
 
 This file is used for user details required for the home page.
 
@@ -88,7 +88,15 @@ This file is used for user details required for the home page.
 | **image** | `string` | User image URL, preferably a `500x500` cropped image. |
 | **title** | `string` | User position or role. |
 
-### **`projects`**
+### **navbar.json**
+This file is used for contact page.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| **formAction** | `string` | Custom form action for the contact form. Check [formspree.io](https://formspree.io). |
+| **socialIcons** | `array` | An array containing objects to generate social icons in the contact page. Each object needs to have `name` and `url` properties(strings). The `name` property should have a matching svg file in **/assets/sprite/svg/** directory. Most of the social icons are already there but feel free to add your custom svg icons.
+
+### **projects**
 This folder contains all the projects as individual files in **json** format. Each file in this folder will represent a different project.
 
 Following table contains the format of each file in the projects folder.
@@ -126,6 +134,10 @@ Generate build files
 ```npm run generate```
 
 At this point you'll have a `./build` folder containing all the production ready files for deployment. You can deploy these files to some hosting server or CDN.
+
+If you want to see the app locally run
+
+```npm run dev```
 
 ### CI/CD
 You need prior github/coding experience to deploy this using github actions or some other CI/CD platform. 
