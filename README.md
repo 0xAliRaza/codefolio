@@ -88,8 +88,8 @@ This file is used for user details required for the home page.
 | **image** | `string` | User image URL, preferably a `500x500` cropped image. |
 | **title** | `string` | User position or role. |
 
-### **navbar.json**
-This file is used for contact page.
+### **contact.json**
+This file is used to generate contact page.
 
 | Property | Type | Description |
 | --- | --- | --- |
