@@ -11,7 +11,12 @@
         </div>
         <!-- Add your custom action here (i.e. formspree.io) -->
         <div class="contact__form-container">
-          <form v-if="contact" :action="contact.formAction" method="POST" class="contact__form">
+          <form
+            v-if="contact"
+            :action="contact.formAction"
+            method="POST"
+            class="contact__form"
+          >
             <div class="mb-3">
               <label for="fullname" class="form-label contact__label"
                 >Full name</label
@@ -66,7 +71,13 @@
           </form>
         </div>
         <div class="contact__links">
-          <a v-for="icon in contact.socialIcons" :key="icon.name" class="contact__link" :href="icon.url" target="_blank">
+          <a
+            v-for="icon in contact.socialIcons"
+            :key="icon.name"
+            class="contact__link"
+            :href="icon.url"
+            target="_blank"
+          >
             <Icon class="contact__icon" :name="icon.name" />
           </a>
         </div>
@@ -87,7 +98,7 @@ export default Vue.extend({
     return {
       skills,
       navbar,
-      contact
+      contact,
     }
   },
 })
@@ -114,8 +125,8 @@ export default Vue.extend({
     }
   }
   &__icon {
-    width: 2em!important;
-    height: 2em!important;
+    width: 2em !important;
+    height: 2em !important;
   }
   &__links {
     display: flex;

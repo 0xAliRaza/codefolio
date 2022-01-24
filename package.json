@@ -8,8 +8,10 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "npm run lint:js",
-    "test": "jest"
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "test": "jest",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
@@ -36,13 +38,14 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
-    "husky": "^7.0.2",
+    "install": "^0.13.0",
     "jest": "^27.0.5",
     "lint-staged": "^11.2.0",
     "node-sass": "^6.0.1",
     "prettier": "^2.3.2",
     "sass-loader": "^10.2.0",
     "ts-jest": "^27.0.3",
-    "vue-jest": "^3.0.4"
+    "vue-jest": "^3.0.4",
+    "husky": "^7.0.0"
   }
 }

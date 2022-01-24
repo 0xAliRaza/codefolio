@@ -88,7 +88,7 @@ export default Vue.extend({
   &__title {
     font-size: pxToRem(14);
     font-weight: 300;
-    color: rgba($gray-600, .8);
+    color: rgba($gray-600, 0.8);
     margin: 0 0 pxToRem(8);
     @include media-breakpoint-up(md) {
       font-size: pxToRem(16);

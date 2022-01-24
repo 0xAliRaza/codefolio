@@ -30,7 +30,6 @@ ul {
   padding: 0;
 }
 
-
 /* Text selection styles */
 ::-moz-selection {
   color: $light;
@@ -41,8 +40,6 @@ ul {
   color: $light;
   background: $primary;
 }
-
-
 
 /* Scrollbar customizations */
 /* width */
@@ -67,4 +64,3 @@ ul {
   background: $gray-6;
   border: 1px solid darken($gray-6, 4);
 }
-

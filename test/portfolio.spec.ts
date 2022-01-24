@@ -9,7 +9,7 @@ describe('portfolio', () => {
           navbar: { resumeUrl: '', externalLinks: [] },
         }
       },
-      stubs: ['Icon']
+      stubs: ['Icon'],
     })
     expect(wrapper.html()).toMatchSnapshot()
   })
