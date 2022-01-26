@@ -5,7 +5,7 @@
       :external-links="navbar.externalLinks"
     />
     <main class="main">
-      <section class="about">
+      <section class="home">
         <User :user="user" />
       </section>
     </main>
@@ -30,7 +30,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 @import '@/scss/abstracts';
-.about {
+.home {
   padding: pxToRem(10);
   display: flex;
   align-items: center;

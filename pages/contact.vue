@@ -108,7 +108,6 @@ export default Vue.extend({
 @import '@/scss/abstracts';
 .contact {
   padding: pxToRem(10);
-  @include full-height;
   display: flex;
   flex-direction: column;
   align-items: stretch;

@@ -18,7 +18,7 @@
           <NuxtLink class="navbar__link" to="/">Home</NuxtLink>
         </li>
         <li class="navbar__list-item" @click="toggleNavbar">
-          <NuxtLink class="navbar__link" to="/skills">Skills</NuxtLink>
+          <NuxtLink class="navbar__link" to="/about">About</NuxtLink>
         </li>
         <li class="navbar__list-item" @click="toggleNavbar">
           <NuxtLink class="navbar__link" to="/portfolio">Portfolio</NuxtLink>
