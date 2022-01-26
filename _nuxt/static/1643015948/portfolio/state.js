@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fcodefolio\u002F_nuxt\u002Fstatic\u002F1643015948",layout:"default",error:a,serverRendered:true,routePath:"\u002Fportfolio",config:{_app:{basePath:"\u002Fcodefolio\u002F",assetsPath:"\u002Fcodefolio\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"452eb7a1"}}}}(null));
