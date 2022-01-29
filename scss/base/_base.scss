@@ -3,6 +3,7 @@ html {
 }
 body {
   background-color: $gray-1;
+  color: $dark;
 }
 *,
 *:before,
@@ -22,6 +23,10 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+hr {
+  background-color: $gray-5;
 }
 
 /* Text selection styles */

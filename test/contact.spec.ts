@@ -10,6 +10,9 @@ describe('contact', () => {
 
           contact: {
             formAction: '#',
+            location: 'Example, USA.',
+            email: 'contact@example.com',
+            phone: '+1-555-555-0100',
           },
         }
       },

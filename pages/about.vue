@@ -75,7 +75,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @import '@/scss/abstracts';
 .about {
-  padding: pxToRem(20) 0;
+  padding: pxToRem(10) 0;
 
   &__links {
     display: flex;
@@ -90,7 +90,7 @@ export default Vue.extend({
     backface-visibility: hidden;
     transform: translateZ(0);
     display: inline-flex;
-    color: $gray-6;
+    color: $gray-7;
     transition: all 0.2s ease;
     @include hoctive {
       transform: scale(1.2);
