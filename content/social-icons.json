@@ -1,0 +1,28 @@
+{
+  "icons": [
+    {
+      "name": "discord",
+      "url": "#"
+    },
+    {
+      "name": "facebook",
+      "url": "#"
+    },
+    {
+      "name": "github",
+      "url": "#"
+    },
+    {
+      "name": "twitter",
+      "url": "#"
+    },
+    {
+      "name": "gmail",
+      "url": "#"
+    },
+    {
+      "name": "skype",
+      "url": "#"
+    }
+  ]
+}

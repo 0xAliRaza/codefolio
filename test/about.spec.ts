@@ -8,6 +8,13 @@ describe('about', () => {
         return {
           navbar: { resumeUrl: '', externalLinks: [] },
           about: {},
+          socialIcons: {
+            icons: [
+              { name: 'discord', url: '#' },
+              { name: 'twitter', url: '#' },
+              { name: 'facebook', url: '#' },
+            ],
+          },
         }
       },
       stubs: ['Icon', 'nuxt-content'],

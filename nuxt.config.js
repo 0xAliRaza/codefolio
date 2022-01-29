@@ -79,7 +79,15 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
+
+  // Sitemap module options: https://sitemap.nuxtjs.org/guide/configuration
+  sitemap: {
+    hostname: 'https://example.com',
+    gzip: true,
+    routes: ['/test', '/test/2', '/test/3'],
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},

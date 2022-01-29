@@ -17,7 +17,7 @@
               </div>
               <div class="about__links">
                 <a
-                  v-for="(icon, i) in contact.socialIcons"
+                  v-for="(icon, i) in socialIcons.icons"
                   :key="icon.name + i"
                   class="about__link"
                   :href="icon.url"
@@ -60,11 +60,11 @@ export default Vue.extend({
   async asyncData({ $content }) {
     const about = await $content('about').fetch()
     const navbar = await $content('navbar').fetch()
-    const contact = await $content('contact').fetch()
+    const socialIcons = await $content('social-icons').fetch()
     return {
       about,
       navbar,
-      contact,
+      socialIcons,
     }
   },
   head: {

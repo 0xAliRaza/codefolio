@@ -1,1 +1,6 @@
 coverage
+.nuxt
+.husky
+.gitignore
+dist
+.git

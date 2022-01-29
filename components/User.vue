@@ -13,7 +13,7 @@
       <div class="user__about">
         <p>
           {{ user.about
-          }}<Button nuxt-link="/about" class="user__learn-more-btn" small
+          }}<Button nuxt-link="/about" class="p-1 user__learn-more-btn" small
             >Learn more...</Button
           >
         </p>

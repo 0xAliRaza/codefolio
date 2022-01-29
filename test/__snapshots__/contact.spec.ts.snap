@@ -82,35 +82,6 @@ exports[`contact renders correctly 1`] = `
           </div>
         </form>
       </div>
-      <div class="contact__links">
-        <a href="#"
-           target="_blank"
-           class="contact__link"
-        >
-          <icon-stub name="discord"
-                     class="contact__icon"
-          >
-          </icon-stub>
-        </a>
-        <a href="#"
-           target="_blank"
-           class="contact__link"
-        >
-          <icon-stub name="twitter"
-                     class="contact__icon"
-          >
-          </icon-stub>
-        </a>
-        <a href="#"
-           target="_blank"
-           class="contact__link"
-        >
-          <icon-stub name="facebook"
-                     class="contact__icon"
-          >
-          </icon-stub>
-        </a>
-      </div>
     </section>
   </main>
   <footer>

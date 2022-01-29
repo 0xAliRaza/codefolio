@@ -1,5 +1,5 @@
 {
-  "resumeUrl": "#",
+  "resumeUrl": "https://example.com/resume",
   "externalLinks": [
     {
       "text": "github",
@@ -7,7 +7,7 @@
     },
     {
       "text": "blog",
-      "url": "#"
+      "url": "https://example.com/blog"
     }
   ]
 }

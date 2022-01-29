@@ -16,6 +16,7 @@
   "dependencies": {
     "@nuxt/content": "^1.14.0",
     "@nuxt/test-utils": "^0.2.2",
+    "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/svg-sprite": "^0.5.2",
     "bootstrap": "^5.1.2",
     "core-js": "^3.15.1",
@@ -38,6 +39,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
+    "husky": "^7.0.0",
     "install": "^0.13.0",
     "jest": "^27.0.5",
     "lint-staged": "^11.2.0",
@@ -45,7 +47,6 @@
     "prettier": "^2.3.2",
     "sass-loader": "^10.2.0",
     "ts-jest": "^27.0.3",
-    "vue-jest": "^3.0.4",
-    "husky": "^7.0.0"
+    "vue-jest": "^3.0.4"
   }
 }

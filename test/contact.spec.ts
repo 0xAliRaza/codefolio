@@ -10,11 +10,6 @@ describe('contact', () => {
 
           contact: {
             formAction: '#',
-            socialIcons: [
-              { name: 'discord', url: '#' },
-              { name: 'twitter', url: '#' },
-              { name: 'facebook', url: '#' },
-            ],
           },
         }
       },

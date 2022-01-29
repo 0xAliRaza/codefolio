@@ -50,7 +50,8 @@ Here's how the structure of content folder looks like.
 ```
 content
 |	navbar.json
-|	about.json
+|	about.md
+|	social-icons.json
 |	user.json
 |
 └───projects
@@ -71,9 +72,17 @@ This file is used for optional data related to top navbar.
 | **resumeUrl**     | `string` | Resume file URL for navbar resume button.                                                                                                                                  |
 | **externalLinks** | `array`  | An array containing objects to generate external links in the top navbar. Each external link object needs to have `text` and `url` string properties to function properly. |
 
-### **About.md**
+### **about.md**
 
 This markdown file is used for about page.
+
+### **social-icons.json**
+
+This file is used to generate social icons in about page.
+
+| Property  | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                |
+| --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **icons** | `array` | An array containing objects to generate social icons in the contact page. Each object needs to have `name` and `url` properties(strings). The `name` property should have a matching svg file in **/assets/sprite/svg/** directory. Most of the social icons are already available but feel free to add your custom svg icons. In dev mode, you can visit `/_icons` route to list all the available icons. |
 
 ### **user.json**
 
@@ -90,10 +99,9 @@ This file is used for user details required for the home page.
 
 This file is used to generate contact page.
 
-| Property        | Type     | Description                                                                                                                                                                                                                                                                                                                |
-| --------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **formAction**  | `string` | Custom form action for the contact form. Check [formspree.io](https://formspree.io).                                                                                                                                                                                                                                       |
-| **socialIcons** | `array`  | An array containing objects to generate social icons in the contact page. Each object needs to have `name` and `url` properties(strings). The `name` property should have a matching svg file in **/assets/sprite/svg/** directory. Most of the social icons are already there but feel free to add your custom svg icons. |
+| Property       | Type     | Description                                                                          |
+| -------------- | -------- | ------------------------------------------------------------------------------------ |
+| **formAction** | `string` | Custom form action for the contact form. Check [formspree.io](https://formspree.io). |
 
 ### **projects**
 
@@ -116,7 +124,13 @@ See existing dummy files in the content folder for reference.
 
 ## SEO
 
+### Meta Tags
+
 Nuxt.js provides efficient ways to optimize your site for search engines. Please refer to [Nuxt.js SEO guide](https://nuxtjs.org/docs/features/meta-tags-seo/) for more details.
+
+### Sitemaps
+
+This project uses [@nuxtjs/sitemap](https://sitemap.nuxtjs.org/) to auto generate sitemap.xml file. Please refer to their [configuration guide](https://sitemap.nuxtjs.org/guide/configuration) if you need further information.
 
 ## Deployment
 
