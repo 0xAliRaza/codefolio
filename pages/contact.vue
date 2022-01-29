@@ -92,11 +92,9 @@ import Vue from 'vue'
 
 export default Vue.extend({
   async asyncData({ $content }) {
-    const skills = await $content('skills').fetch()
     const navbar = await $content('navbar').fetch()
     const contact = await $content('contact').fetch()
     return {
-      skills,
       navbar,
       contact,
     }

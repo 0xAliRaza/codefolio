@@ -50,7 +50,7 @@ Here's how the structure of content folder looks like.
 ```
 content
 |	navbar.json
-|	skills.json
+|	about.json
 |	user.json
 |
 └───projects
@@ -71,13 +71,9 @@ This file is used for optional data related to top navbar.
 | **resumeUrl**     | `string` | Resume file URL for navbar resume button.                                                                                                                                  |
 | **externalLinks** | `array`  | An array containing objects to generate external links in the top navbar. Each external link object needs to have `text` and `url` string properties to function properly. |
 
-### **skills.json**
+### **About.md**
 
-This file is used for user skills.
-
-| Property   | Type    | Description                                                           |
-| ---------- | ------- | --------------------------------------------------------------------- |
-| **skills** | `array` | An array containing all the skills (strings) to generate skills page. |
+This markdown file is used for about page.
 
 ### **user.json**
 

@@ -7,24 +7,7 @@ describe('contact', () => {
       data() {
         return {
           navbar: { resumeUrl: '', externalLinks: [] },
-          skills: {
-            skills: [
-              'HTML',
-              'JavaScript',
-              'CSS',
-              'SCSS',
-              'Bootstrap',
-              'Angular',
-              'Vue.js',
-              'Nuxt.js',
-              'PHP',
-              'Laravel',
-              'Bash',
-              'Docker',
-              'JQuery',
-              'Webpack',
-            ],
-          },
+
           contact: {
             formAction: '#',
             socialIcons: [
