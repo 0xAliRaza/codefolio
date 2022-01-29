@@ -8,14 +8,14 @@
       />
     </div>
     <div class="user__meta">
-      <h4 class="user__title">{{ user.title }}</h4>
-      <h1 class="user__name">{{ user.fullname }}</h1>
+      <h4 class="user__title text-nowrap">{{ user.title }}</h4>
+      <h1 class="user__name text-nowrap">{{ user.fullname }}</h1>
       <div class="user__about">
         <p>
           {{ user.about }}
         </p>
       </div>
-      <div class="user__cta">
+      <div class="user__cta text-nowrap">
         <Button class="me-1" primary-glow nuxt-link="/contact">Contact</Button>
         <Button class="" outline-primary nuxt-link="/projects">Projects</Button>
       </div>
