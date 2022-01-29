@@ -102,6 +102,9 @@ This file is used to generate contact page.
 | Property       | Type     | Description                                                                          |
 | -------------- | -------- | ------------------------------------------------------------------------------------ |
 | **formAction** | `string` | Custom form action for the contact form. Check [formspree.io](https://formspree.io). |
+| **location**   | `string` | User location string.                                                                |
+| **email**      | `string` | User email address.                                                                  |
+| **phone**      | `string` | User phone number.                                                                   |
 
 ### **projects**
 
