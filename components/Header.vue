@@ -29,8 +29,8 @@
       </ul>
       <ul class="navbar__list">
         <li
-          v-for="link in externalLinks"
-          :key="link.url"
+          v-for="(link, i) in externalLinks"
+          :key="link.url + i"
           class="navbar__list-item"
           @click="toggleNavbar"
         >

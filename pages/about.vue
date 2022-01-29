@@ -17,8 +17,8 @@
               </div>
               <div class="about__links">
                 <a
-                  v-for="icon in contact.socialIcons"
-                  :key="icon.name"
+                  v-for="(icon, i) in contact.socialIcons"
+                  :key="icon.name + i"
                   class="about__link"
                   :href="icon.url"
                   target="_blank"
