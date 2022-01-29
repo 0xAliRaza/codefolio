@@ -47,7 +47,7 @@
             outline-gray
             class="navbar__resume-button"
             @click="toggleNavbar"
-            >Resume <Icon class="ms-1" name="resume"
+            >Resume <Icon class="ms-1" name="download"
           /></Button>
         </li>
       </ul>

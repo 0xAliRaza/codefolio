@@ -12,7 +12,10 @@
       <h1 class="user__name text-nowrap">{{ user.fullname }}</h1>
       <div class="user__about">
         <p>
-          {{ user.about }}
+          {{ user.about
+          }}<Button nuxt-link="/about" class="user__learn-more-btn" small
+            >Learn more...</Button
+          >
         </p>
       </div>
       <div class="user__cta text-nowrap">
@@ -113,6 +116,12 @@ export default Vue.extend({
       margin: 0;
       line-height: 1.75em;
     }
+  }
+  &__learn-more-btn {
+    // padding: 0;
+    // margin: 0;
+    // line-height: inherit;
+    // font-size: inherit;
   }
   &__cta {
     user-select: none;

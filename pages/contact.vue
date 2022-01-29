@@ -70,17 +70,6 @@
             </div>
           </form>
         </div>
-        <div class="contact__links">
-          <a
-            v-for="icon in contact.socialIcons"
-            :key="icon.name"
-            class="contact__link"
-            :href="icon.url"
-            target="_blank"
-          >
-            <Icon class="contact__icon" :name="icon.name" />
-          </a>
-        </div>
       </section>
     </main>
     <Footer />
@@ -122,30 +111,6 @@ export default Vue.extend({
     flex-basis: pxToRem(650);
     @include media-breakpoint-up(lg) {
       flex-basis: pxToRem(750);
-    }
-  }
-  &__icon {
-    width: 2em !important;
-    height: 2em !important;
-  }
-  &__links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    grid-gap: pxToRem(8);
-    padding: pxToRem(24);
-    z-index: 200;
-  }
-  &__link {
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    display: inline-flex;
-    color: $gray-6;
-    transition: all 0.2s ease;
-    @include hoctive {
-      transform: scale(1.2);
-      color: $gray-8;
     }
   }
 
