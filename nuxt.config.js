@@ -38,23 +38,23 @@ export default {
       {
         rel: 'apple-touch-icon',
         sizes: '180x180',
-        href: '/apple-touch-icon.png',
+        href: '/codefolio/apple-touch-icon.png',
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: '/favicon-32x32.png',
+        href: '/codefolio/favicon-32x32.png',
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
-        href: '/favicon-16x16.png',
+        href: '/codefolio/favicon-16x16.png',
       },
       {
         rel: 'manifest',
-        href: '/site.webmanifest',
+        href: '/codefolio/site.webmanifest',
       },
     ],
   },
