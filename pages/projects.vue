@@ -44,6 +44,9 @@ export default Vue.extend({
       navbar,
     }
   },
+  head: {
+    title: 'Projects - Codefolio',
+  },
 })
 </script>
 

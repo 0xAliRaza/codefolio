@@ -36,6 +36,9 @@ export default Vue.extend({
       navbar,
     }
   },
+  head: {
+    title: 'About - Codefolio',
+  },
 })
 </script>
 <style lang="scss" scoped>

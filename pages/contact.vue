@@ -99,6 +99,9 @@ export default Vue.extend({
       contact,
     }
   },
+  head: {
+    title: 'Contact - Codefolio',
+  },
 })
 </script>
 

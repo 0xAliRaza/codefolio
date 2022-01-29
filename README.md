@@ -114,6 +114,10 @@ Note: Create new files to add more projects and name them as project name.
 
 See existing dummy files in the content folder for reference.
 
+## SEO
+
+Nuxt.js provides efficient ways to optimize your site for search engines. Please refer to [Nuxt.js SEO guide](https://nuxtjs.org/docs/features/meta-tags-seo/) for more details.
+
 ## Deployment
 
 After customizing the content according to your needs, you need to deploy the app to production.
