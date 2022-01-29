@@ -29,10 +29,10 @@ exports[`Header renders correctly 1`] = `
         </nuxtlink-stub>
       </li>
       <li class="navbar__list-item">
-        <nuxtlink-stub to="/portfolio"
+        <nuxtlink-stub to="/projects"
                        class="navbar__link"
         >
-          Portfolio
+          Projects
         </nuxtlink-stub>
       </li>
       <li class="navbar__list-item">

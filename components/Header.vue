@@ -21,7 +21,7 @@
           <NuxtLink class="navbar__link" to="/about">About</NuxtLink>
         </li>
         <li class="navbar__list-item" @click="toggleNavbar">
-          <NuxtLink class="navbar__link" to="/portfolio">Portfolio</NuxtLink>
+          <NuxtLink class="navbar__link" to="/projects">Projects</NuxtLink>
         </li>
         <li class="navbar__list-item" @click="toggleNavbar">
           <NuxtLink class="navbar__link" to="/contact">Contact</NuxtLink>

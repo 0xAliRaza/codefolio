@@ -1,9 +1,9 @@
 import { shallowMount } from '@vue/test-utils'
-import portfolio from '@/pages/portfolio.vue'
+import projects from '@/pages/projects.vue'
 
-describe('portfolio', () => {
+describe('projects', () => {
   it('renders correctly', () => {
-    const wrapper = shallowMount(portfolio, {
+    const wrapper = shallowMount(projects, {
       data() {
         return {
           navbar: { resumeUrl: '', externalLinks: [] },

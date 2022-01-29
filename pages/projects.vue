@@ -5,11 +5,11 @@
       :external-links="navbar.externalLinks"
     />
     <main class="main">
-      <section class="portfolio">
+      <section class="projects">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 text-center mb-5 mt-3">
-              <h1>Portfolio</h1>
+              <h1>Projects</h1>
             </div>
             <div
               v-for="project in projects"
@@ -49,7 +49,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 @import '@/scss/abstracts';
-.portfolio {
+.projects {
   padding: pxToRem(10) 0;
 }
 </style>
