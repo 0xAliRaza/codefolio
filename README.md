@@ -88,12 +88,12 @@ This file is used to generate social icons in about page.
 
 This file is used for user details required for the home page.
 
-| Property     | Type     | Description                                           |
-| ------------ | -------- | ----------------------------------------------------- |
-| **fullname** | `string` | User name.                                            |
-| **about**    | `string` | A little bit about the user.                          |
-| **image**    | `string` | User image URL, preferably a `500x500` cropped image. |
-| **title**    | `string` | User position or role.                                |
+| Property     | Type     | Description                                                                                                                                                       |
+| ------------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **fullname** | `string` | User name.                                                                                                                                                        |
+| **about**    | `string` | A little bit about the user.                                                                                                                                      |
+| **image**    | `string` | A valid image URL starting from _http_ or a name of an image which is placed in `assets/images` directory. Please crop the image to `500x500` for better results. |
+| **title**    | `string` | User position or role.                                                                                                                                            |
 
 ### **contact.json**
 
@@ -143,23 +143,31 @@ After customizing the content according to your needs, you need to deploy the ap
 
 Let's see how to generate build files.
 
-Start by cloning the repository on your local machine using git (or download it manually):
+Start by cloning the repository on your local machine using git (or download it manually)
 
-`git clone https://github.com/0xaliraza/codefolio`
+```
+git clone https://github.com/0xaliraza/codefolio
+```
 
-Install the dependencies
+Then, navigate to the root directory of the repository and install the dependencies
 
-`npm install`
+```
+npm install
+```
 
 Generate build files
 
-`npm run generate`
+```
+npm run generate
+```
 
 At this point you'll have a `./build` folder containing all the production ready files for deployment. You can deploy these files to some hosting server or CDN.
 
 If you want to see the app locally run
 
-`npm run dev`
+```
+npm run dev
+```
 
 ### CI/CD
 

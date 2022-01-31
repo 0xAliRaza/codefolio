@@ -3,7 +3,11 @@
     <div class="user__image-container">
       <img
         class="user__image"
-        :src="user.image"
+        :src="
+          isValidUrl(user.image)
+            ? user.image
+            : require('~/assets/images/' + user.image)
+        "
         :alt="`${user.fullname}'s image`"
       />
     </div>
@@ -35,6 +39,19 @@ export default Vue.extend({
     user: {
       required: true,
       type: Object as () => UserModel,
+    },
+  },
+  methods: {
+    isValidUrl: function (str: string) {
+      let url
+
+      try {
+        url = new URL(str)
+      } catch (_) {
+        return false
+      }
+
+      return url.protocol === 'http:' || url.protocol === 'https:'
     },
   },
 })
@@ -117,12 +134,7 @@ export default Vue.extend({
       line-height: 1.75em;
     }
   }
-  &__learn-more-btn {
-    // padding: 0;
-    // margin: 0;
-    // line-height: inherit;
-    // font-size: inherit;
-  }
+
   &__cta {
     user-select: none;
   }
