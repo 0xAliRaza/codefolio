@@ -6,7 +6,7 @@
         :src="
           isValidUrl(user.image)
             ? user.image
-            : require('~/assets/images/' + user.image)
+            : require(`~/assets/images/${user.image}`)
         "
         :alt="`${user.fullname}'s image`"
       />
