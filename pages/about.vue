@@ -40,6 +40,7 @@
                   primary-glow
                   :link="navbar.resumeUrl"
                   class="me-1"
+                  download=""
                   >Resume <Icon class="ms-1" name="download"
                 /></Button>
                 <Button outline-primary nuxt-link="/contact">Contact</Button>

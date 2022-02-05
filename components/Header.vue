@@ -46,6 +46,7 @@
             small
             outline-gray
             class="navbar__resume-button"
+            download=""
             @click="toggleNavbar"
             >Resume <Icon class="ms-1" name="download"
           /></Button>
