@@ -1,7 +1,11 @@
 <template>
   <div class="project">
     <div class="project__image">
-      <img :src="image" alt="test image" class="img-fluid" />
+      <img
+        :src="isValidUrl(image) ? image : require(`~/assets/images/${image}`)"
+        alt="test image"
+        class="img-fluid"
+      />
       <div v-if="technologies" class="project__technologies">
         <span
           v-for="(tech, i) in technologies"
@@ -62,6 +66,19 @@ export default Vue.extend({
     image: { required: true, type: String },
     links: { default: null, type: Object },
     technologies: { default: null, type: Array },
+  },
+  methods: {
+    isValidUrl: function (str: string) {
+      let url
+
+      try {
+        url = new URL(str)
+      } catch (_) {
+        return false
+      }
+
+      return url.protocol === 'http:' || url.protocol === 'https:'
+    },
   },
 })
 </script>

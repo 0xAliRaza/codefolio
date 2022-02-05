@@ -88,12 +88,12 @@ This file is used to generate social icons in about page.
 
 This file is used for user details required for the home page.
 
-| Property     | Type     | Description                                                                                                                                                       |
-| ------------ | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **fullname** | `string` | User name.                                                                                                                                                        |
-| **about**    | `string` | A little bit about the user.                                                                                                                                      |
-| **image**    | `string` | A valid image URL starting from _http_ or a name of an image which is placed in `assets/images` directory. Please crop the image to `500x500` for better results. |
-| **title**    | `string` | User position or role.                                                                                                                                            |
+| Property     | Type     | Description                                                                                                                                                                             |
+| ------------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **fullname** | `string` | User name.                                                                                                                                                                              |
+| **about**    | `string` | A little bit about the user.                                                                                                                                                            |
+| **image**    | `string` | A valid image URL starting from _http_ or a name (including extension) of an image which is placed in `assets/images` directory. Please crop the image to `500x500` for better results. |
+| **title**    | `string` | User position or role.                                                                                                                                                                  |
 
 ### **contact.json**
 
@@ -117,7 +117,7 @@ Following table contains the format of each file in the projects folder.
 | **id**           | `integer` | A unique identifier for the ordering.                                                                                                    |
 | **title**        | `string`  | Project name.                                                                                                                            |
 | **description**  | `string`  | Details about the project.                                                                                                               |
-| **image**        | `string`  | Project image URL.                                                                                                                       |
+| **image**        | `string`  | A valid image URL starting from _http_ or a name (including extension) of an image which is placed in `assets/images` directory.         |
 | **links**        | `object`  | An object that contains external links of the project. It can has optional `liveDemo`, `videoDemo` and `sourceCode` properties for URLs. |
 | **technologies** | `array`   | An array containing all the technologies (strings) used in the project.                                                                  |
 

@@ -21,7 +21,7 @@
                   <Project
                     :title="project.title"
                     :description="project.description"
-                    image="https://source.unsplash.com/random/1920x1080"
+                    :image="project.image"
                     :links="project.links"
                     :technologies="project.technologies"
                   />
@@ -41,7 +41,18 @@ import Vue from 'vue'
 
 export default Vue.extend({
   async asyncData({ $content }) {
-    const projects = await $content('projects').fetch()
+    const projects = (await $content('projects').fetch()).sort(
+      // Sort by projects by id in ascending order
+      (a: any, b: any) => {
+        if (a.id > b.id) {
+          return 1
+        }
+        if (a.id < b.id) {
+          return -1
+        }
+        return 0
+      }
+    )
     const navbar = await $content('navbar').fetch()
     return {
       projects,
