@@ -144,6 +144,8 @@ export default Vue.extend({
   }
 
   &__toggler {
+    background-color: rgba($color: $gray-1, $alpha: 0.8);
+    border-radius: pxToRem(6);
     padding: pxToRem(10);
     cursor: pointer;
     position: fixed;

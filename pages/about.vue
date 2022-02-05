@@ -12,7 +12,7 @@
               <div class="about__heading my-3 text-center">
                 <h1>About</h1>
               </div>
-              <div class="py-3">
+              <div class="p-3">
                 <nuxt-content :document="about" />
               </div>
               <div class="about__links">

@@ -64,3 +64,8 @@ hr {
   background: $gray-6;
   border: 1px solid darken($gray-6, 4);
 }
+
+b,
+strong {
+  font-weight: 600;
+}

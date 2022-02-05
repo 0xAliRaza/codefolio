@@ -17,8 +17,8 @@
       <div class="user__about">
         <p>
           {{ user.about
-          }}<Button nuxt-link="/about" class="p-1 user__learn-more-btn" small
-            >Learn more...</Button
+          }}<Button nuxt-link="/about" class="user__learn-more-btn" small
+            >Learn more</Button
           >
         </p>
       </div>
@@ -133,6 +133,12 @@ export default Vue.extend({
       margin: 0;
       line-height: 1.75em;
     }
+  }
+
+  &__learn-more-btn {
+    padding: 0;
+    margin: 0 pxToRem(6);
+    line-height: inherit;
   }
 
   &__cta {
