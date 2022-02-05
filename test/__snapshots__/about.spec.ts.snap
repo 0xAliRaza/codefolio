@@ -16,7 +16,7 @@ exports[`about renders correctly 1`] = `
                 About
               </h1>
             </div>
-            <div class="py-3">
+            <div class="p-3">
               <nuxt-content-stub document="[object Object]">
               </nuxt-content-stub>
             </div>

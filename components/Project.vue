@@ -86,7 +86,7 @@ export default Vue.extend({
 @import '@/scss/abstracts';
 .project {
   background: $light;
-  border: 1px solid $gray-200;
+  border: 1px solid $gray-300;
   overflow: hidden;
   max-width: pxToRem(480);
   margin-right: auto;
