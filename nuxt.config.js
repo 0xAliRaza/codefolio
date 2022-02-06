@@ -84,7 +84,7 @@ export default {
 
   // Sitemap module options: https://sitemap.nuxtjs.org/guide/configuration
   sitemap: {
-    hostname: 'https://example.com',
+    hostname: 'https://0xali.com/codefolio/',
     gzip: true,
     // routes: ['/test', '/test/2', '/test/3'],
   },
