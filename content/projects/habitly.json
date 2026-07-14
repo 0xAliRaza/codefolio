@@ -2,7 +2,7 @@
   "id": 1,
   "title": "Habitly",
   "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, numquam perspiciatis? Rem iste ad cum optio deserunt vero quos, obcaecati ut dicta, tempore earum porro a facere! Quidem, atque excepturi.",
-  "image": "https://source.unsplash.com/random/1920x1080",
+  "image": "https://picsum.photos/seed/habitly/1920/1080",
   "links": {
     "liveDemo": "#",
     "videoDemo": "#",
