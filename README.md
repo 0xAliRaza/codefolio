@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-	<a href="https://0xali.com/codefolio">Live Demo</a> |
+	<a href="https://0xaliraza.github.io/codefolio">Live Demo</a> |
 	<a href="#deployment">Deployment</a> |
 	<a href="#about">About</a> |
 	<a href="#features">Features</a> |
